@@ -1,10 +1,10 @@
 # X post — trajectory ecosystem (dry humor)
 
-**Attach image:** `assets/launch/x-coordination-launch.png`
+**Attach image:** `assets/launch/x-ecosystem-pair.png`
 
 ---
 
-## Post
+## Post (recommended)
 
 ```
 Two repos, one thesis: adaptive coherence under unstable contexts.
@@ -35,6 +35,9 @@ Same unstable contexts. Different failure modes.
 
 The system preserved continuity.
 Reality degraded quietly.
+
+https://github.com/higuseonhye/trajectory-native
+https://github.com/higuseonhye/trajectory-drift
 
 #BuildInPublic
 ```

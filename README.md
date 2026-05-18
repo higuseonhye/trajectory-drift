@@ -10,8 +10,10 @@ Not another AI observability dashboard. A calm environment for when adaptation d
 Shared thesis: [adaptive coherence under unstable contexts](docs/adaptive-coherence.md).
 
 <p align="center">
-  <img src="./assets/screenshots/dashboard-overview.png" alt="Multi-agent coordination workspace" width="800" />
+  <img src="./assets/screenshots/dashboard-overview.png" alt="System-side adaptive coherence — coordination workspace" width="800" />
 </p>
+
+<p align="center"><sub>Pairs with <a href="https://github.com/higuseonhye/trajectory-native">trajectory-native</a> for human-side adaptive coherence.</sub></p>
 
 ---
 
