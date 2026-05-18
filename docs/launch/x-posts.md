@@ -1,98 +1,73 @@
-# X.com launch posts
+# X.com launch posts (calibration positioning)
 
-Visuals: `assets/screenshots/` and `assets/launch/`
+Visuals: `assets/screenshots/` · `assets/launch/launch-card.png`
 
 ---
 
-## Post 1 — Launch (main)
+## Post 1 — Launch
 
-Shipped an MVP for AI agent observability.
+Shipping Trajectory Drift — adaptive trajectory calibration for AI systems.
 
-Trajectory Drift ingests agent execution logs, builds a step-level graph, and flags:
-→ missing retrieval
-→ hallucinated observations
-→ semantic drift from golden runs
+Not another tracing dashboard.
 
-Live demo loads automatically. No setup theater.
+observe → detect → interpret → recalibrate → adapt
+
+Weak signals matter. Continuity matters. Calibration under uncertainty matters.
+
+Live demo: zero setup.
 
 [screenshot: dashboard-overview.png]
 
-Building in public. Feedback welcome.
-
-#AI #Agents #Observability #BuildInPublic
+#BuildInPublic #AI #Agents
 
 ---
 
-## Post 2 — Technical hook
+## Post 2 — The insight
 
-Your agent didn't "fail" — it drifted.
+AI failures aren't only execution errors.
 
-We compare live trajectories vs a golden reference:
-• embedding similarity per step
-• rule checks for missing tools & ungrounded outputs
-• severity-scored report with suggested fixes
+They're failures of *adaptation* — when context shifts and the trajectory loses coherence.
+
+We built a calibration layer that interprets drift and suggests behavioral recalibration.
+
+Not alarms. Adaptation.
+
+---
+
+## Post 3 — Weak signals
+
+Null signals are signals.
+
+Retries. Hesitation loops. Retrieval avoidance. Context carry-over.
+
+Trajectory Drift treats these as instability *precursors* — before the run fully breaks.
 
 [screenshot: graph-closeup.png]
 
-Open source MVP → link in bio
+---
+
+## Post 4 — Forecast
+
+We don't only say "drift happened."
+
+We estimate: *trajectory likely becoming unstable.*
+
+Proactive calibration > post-mortem monitoring.
+
+[screenshot: calibration panel / drift-report.png]
 
 ---
 
-## Post 3 — Problem / solution
+## Post 5 — For builders
 
-Logs tell you *what* happened.
-Trajectory Drift tells you *where* the run diverged.
-
-Support agent demo:
-- skipped `retrieve_knowledge`
-- hallucinated refund policy from web search
-- returned wrong answer to user
-
-[screenshot: drift-report.png]
-
-Demo-ready dashboard. Link below.
-
----
-
-## Post 4 — Build in public
-
-Week N: agent observability MVP
-
-Stack:
-- Next.js + TypeScript
-- D3 trajectory graphs
-- drift engine (embeddings + rules)
-- auto-generated remediation reports
-
-[screenshot: timeline-replay.png]
-
-Not a framework. One product, one job: catch agent drift early.
-
----
-
-## Post 5 — Investor-readable
-
-AI agents are going to production faster than observability tooling.
-
-We're building Trajectory Drift — step-level drift detection for agent runs.
+Building behavioral adaptation infrastructure.
 
 MVP today:
-✓ log ingestion
-✓ graph visualization
-✓ drift scoring + reports
-✓ zero-click demo
+✓ trajectory graphs
+✓ drift detection
+✓ calibration layer + memory
+✓ instability forecast
+
+Strategic direction: coherence over time.
 
 DMs open for design partners.
-
----
-
-## Thread starter (optional)
-
-🧵 Why we're building Trajectory Drift
-
-1/ Agents are chains of steps, not single prompts
-2/ Production failures are often *structural* (skipped retrieval, wrong tool)
-3/ You need a golden trajectory to compare against
-4/ We built the smallest tool that does this end-to-end
-
-Demo: [your-url]/dashboard

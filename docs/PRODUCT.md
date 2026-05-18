@@ -1,29 +1,67 @@
 # Product overview
 
-Trajectory Drift is an **AI agent observability** product. It helps engineering teams detect when live agent runs diverge from approved execution paths.
+**Trajectory Drift** is adaptive trajectory calibration infrastructure for AI systems.
 
-## Core workflow
+Detecting drift is only the first step. The product helps systems **maintain behavioral stability under changing contexts** through interpret → recalibrate → adapt.
 
-1. Define a golden trajectory (expected agent steps).
-2. Ingest a live run as JSON logs.
-3. Review graph, drift score, and remediation report.
+## Flow
 
-## Drift signals
+```
+observe → detect → interpret → recalibrate → adapt
+```
 
-| Type | Example |
-|------|---------|
-| Missing step | `retrieve_knowledge` never called |
-| Hallucination | Observation not grounded in KB |
-| Deviation | Wrong tool or response content |
+1. **Observe** — Ingest agent execution trajectories.
+2. **Detect** — Measure deviation from a reference behavioral model.
+3. **Interpret** — Understand instability factors (not just errors).
+4. **Recalibrate** — Suggest behavioral adjustments.
+5. **Adapt** — Learn from calibration memory across runs.
 
-## Demo scenario
+## Calibration layer
 
-`demo-agent-run.json` — support agent answering refund policy questions.
+Each deviation produces:
 
-- **Reference:** KB retrieval → validation → correct policy response
-- **Actual:** web search → hallucinated policy → skipped validation → incorrect response
+- Analytical interpretation (why adaptation drifted)
+- Instability factors
+- Suggested calibration actions (priority shifts, checkpoints, weight adjustments)
 
-## Positioning
+Tone: calm, systems-oriented — not alarm logging.
 
-- **Is:** Agent run comparison & drift detection
-- **Is not:** A general LLM eval framework, prompt playground, or research prototype
+## Weak signals
+
+Null or weak patterns are treated as meaningful precursors:
+
+- Retry patterns
+- Hesitation loops
+- Retrieval inconsistency / avoidance
+- Chain instability
+- Context carry-over
+
+## Trajectory forecasting
+
+Heuristic estimate of whether continuity is likely to degrade — enabling proactive recalibration.
+
+## Calibration memory
+
+Persists (local, MVP):
+
+- Prior drift events
+- Corrections applied
+- Whether runs stabilized after adaptation
+
+## Stability levels
+
+| Level | Meaning |
+|-------|---------|
+| **Stable** | Trajectory continuity holds |
+| **Unstable** | Early adaptation drift |
+| **Elevated risk** | Continuity likely to degrade without recalibration |
+
+## What this is NOT
+
+- A generic observability dashboard
+- A tracing or logging platform
+- A simple AI eval tool
+
+## Strategic focus
+
+Behavioral adaptation infrastructure: coherence over time, calibration under uncertainty, stable trajectories.

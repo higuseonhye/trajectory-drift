@@ -11,7 +11,7 @@ interface DashboardShellProps {
 
 export function DashboardShell({
   children,
-  subtitle = "Agent execution observability",
+  subtitle = "Adaptive trajectory calibration",
   status,
   actions,
 }: DashboardShellProps) {
@@ -33,7 +33,7 @@ export function DashboardShell({
             </Link>
             <span className="hidden h-4 w-px bg-[var(--border)] sm:block" />
             <span className="hidden text-xs text-zinc-500 sm:block">
-              Live observability
+              Behavioral adaptation
             </span>
           </div>
           <div className="flex flex-wrap items-center gap-3">

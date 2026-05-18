@@ -16,12 +16,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3001",
   ),
-  title: "Trajectory Drift — AI Agent Observability",
+  title: "Trajectory Drift — Adaptive Trajectory Calibration",
   description:
-    "Detect drift, hallucinations, and missing steps in AI agent execution traces. Compare runs against golden trajectories in real time.",
+    "Maintain AI behavioral stability under uncertainty. Observe, detect, interpret, recalibrate, and adapt agent trajectories over time.",
   openGraph: {
     title: "Trajectory Drift",
-    description: "AI agent observability for production agent runs.",
+    description: "Adaptive trajectory calibration for AI systems.",
     images: ["/assets/screenshots/dashboard-overview.png"],
   },
 };

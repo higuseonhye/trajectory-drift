@@ -3,19 +3,19 @@ import Link from "next/link";
 
 const FEATURES = [
   {
-    title: "Trajectory graphs",
+    title: "Continuity assessment",
     description:
-      "Visualize agent steps as a directed graph — thoughts, tool calls, observations, and responses.",
+      "Measure how well a live trajectory maintains alignment with a reference behavioral model over time.",
   },
   {
-    title: "Drift detection",
+    title: "Calibration layer",
     description:
-      "Compare live runs to golden trajectories. Surface missing steps, hallucinations, and semantic deviation.",
+      "Interpret why adaptation drifted and recommend behavioral recalibration — calm, systems-oriented guidance.",
   },
   {
-    title: "Actionable reports",
+    title: "Weak signals & forecast",
     description:
-      "Every finding includes location, severity, likely cause, and a suggested fix.",
+      "Surface instability precursors and estimate whether continuity is likely to degrade.",
   },
 ];
 
@@ -51,16 +51,16 @@ export function LandingPage() {
         <section className="relative overflow-hidden border-b border-[var(--border)] px-6 py-20">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--accent-glow),_transparent_55%)]" />
           <div className="relative mx-auto max-w-6xl">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-blue-400">
-              AI agent observability
+            <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-blue-400/90">
+              Adaptive trajectory calibration
             </p>
             <h1 className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
-              Catch agent drift before it hits production
+              Maintain coherent AI behavior under uncertainty
             </h1>
-            <p className="mt-4 max-w-2xl text-lg text-zinc-400">
-              Trajectory Drift ingests agent execution logs, builds trajectory graphs,
-              and flags missing retrieval, hallucinations, and step-level deviation —
-              with severity scores and remediation guidance.
+            <p className="mt-4 max-w-2xl text-lg leading-relaxed text-zinc-400">
+              Trajectory Drift observes agent execution, detects behavioral drift,
+              interprets instability, and suggests recalibration — so systems adapt
+              instead of silently degrading.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -92,11 +92,11 @@ export function LandingPage() {
         <section id="product" className="border-b border-[var(--border)] px-6 py-16">
           <div className="mx-auto max-w-6xl">
             <h2 className="text-2xl font-semibold tracking-tight">
-              Built for agent ops teams
+              Behavioral adaptation infrastructure
             </h2>
             <p className="mt-2 max-w-2xl text-zinc-400">
-              Drop in JSON execution logs. Get graphs, drift scores, and reports — no
-              manual triage required.
+              Not a monitoring dashboard. A system that helps AI maintain stable
+              trajectories as context changes.
             </p>
             <div className="mt-10 grid gap-6 sm:grid-cols-3">
               {FEATURES.map((f) => (
@@ -132,14 +132,14 @@ export function LandingPage() {
               </figure>
               <figure className="panel overflow-hidden p-1">
                 <Image
-                  src="/assets/screenshots/drift-report.png"
-                  alt="Drift detection report sidebar"
+                  src="/assets/screenshots/calibration-panel.png"
+                  alt="Calibration layer with recalibration guidance"
                   width={600}
                   height={400}
                   className="rounded-lg"
                 />
                 <figcaption className="px-4 py-3 text-xs text-zinc-500">
-                  Drift report — severity, cause, and suggested fix
+                  Calibration layer — interpret, recalibrate, adapt
                 </figcaption>
               </figure>
               <figure className="panel overflow-hidden p-1 md:col-span-2">

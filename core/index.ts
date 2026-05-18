@@ -51,3 +51,22 @@ export { DriftEngine, type DriftEngineOptions } from "./drift/engine";
 // Reports
 export type { DriftReportEntry, DriftReportSummary, DriftReport } from "./report";
 export { generateDriftReport } from "./report";
+
+// Calibration
+export type {
+  StabilityLevel,
+  WeakSignalKind,
+  WeakSignal,
+  TrajectoryForecast,
+  CalibrationAction,
+  CalibrationInsight,
+  CalibrationMemoryEntry,
+  CalibrationMemory,
+  CalibrationResult,
+} from "./calibration";
+export {
+  runCalibration,
+  createEmptyMemory,
+  detectWeakSignals,
+  forecastTrajectoryInstability,
+} from "./calibration";

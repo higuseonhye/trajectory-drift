@@ -2,7 +2,7 @@
 
 import * as d3 from "d3";
 import { useEffect, useRef } from "react";
-import type { TrajectoryGraph } from "@/core";
+import type { StabilityLevel, TrajectoryGraph } from "@/core";
 
 const KIND_COLORS: Record<string, string> = {
   thought: "#6366f1",
@@ -12,11 +12,16 @@ const KIND_COLORS: Record<string, string> = {
   decision: "#a855f7",
 };
 
-const DRIFT_COLOR = "#ef4444";
+const DRIFT_COLORS: Record<StabilityLevel, string> = {
+  stable: "#f59e0b",
+  unstable: "#f59e0b",
+  elevated_risk: "#fb7185",
+};
 
 interface TrajectoryGraphViewProps {
   graph: TrajectoryGraph;
   driftStepIds: Set<string>;
+  stabilityLevel?: StabilityLevel;
   activeStepId?: string | null;
   onStepSelect?: (stepId: string) => void;
 }
@@ -38,9 +43,11 @@ interface SimLink {
 export function TrajectoryGraphView({
   graph,
   driftStepIds,
+  stabilityLevel = "unstable",
   activeStepId,
   onStepSelect,
 }: TrajectoryGraphViewProps) {
+  const driftColor = DRIFT_COLORS[stabilityLevel];
   const containerRef = useRef<HTMLDivElement>(null);
   const svgRef = useRef<SVGSVGElement>(null);
 
@@ -134,7 +141,7 @@ export function TrajectoryGraphView({
       .attr("stroke", (d) => {
         const srcDrift = (d.source as SimNode).isDrift;
         const tgtDrift = (d.target as SimNode).isDrift;
-        return srcDrift || tgtDrift ? DRIFT_COLOR : "#3f3f46";
+        return srcDrift || tgtDrift ? driftColor : "#3f3f46";
       })
       .attr("stroke-width", (d) => {
         const srcDrift = (d.source as SimNode).isDrift;
@@ -157,7 +164,7 @@ export function TrajectoryGraphView({
       .append("circle")
       .attr("r", (d) => (d.id === activeStepId ? 22 : 18))
       .attr("fill", (d) => {
-        if (d.isDrift) return DRIFT_COLOR;
+        if (d.isDrift) return driftColor;
         return KIND_COLORS[d.kind] ?? "#71717a";
       })
       .attr("stroke", (d) => (d.id === activeStepId ? "#fafafa" : "#27272a"))
@@ -201,7 +208,7 @@ export function TrajectoryGraphView({
       simulation.stop();
       resizeObserver.disconnect();
     };
-  }, [graph, driftStepIds, activeStepId, onStepSelect]);
+  }, [graph, driftStepIds, driftColor, activeStepId, onStepSelect]);
 
   if (graph.nodes.length === 0) {
     return (
