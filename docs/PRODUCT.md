@@ -51,4 +51,10 @@ observe → stabilize → learn → recover → adapt
 
 AI systems are imperfect. Humans are too. The product helps both **adapt coherently** — alone and together.
 
+## Ecosystem
+
+- [trajectory-native](https://github.com/higuseonhye/trajectory-native) — human-side adaptive coherence
+- [adaptive-coherence.md](./adaptive-coherence.md) — shared thesis
+- [coordination-failures.md](./coordination-failures.md) · [drift-taxonomy.md](./drift-taxonomy.md)
+
 See also: [STRATEGY.md](./STRATEGY.md)

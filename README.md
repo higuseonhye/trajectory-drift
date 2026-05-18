@@ -1,12 +1,33 @@
 # Trajectory Drift
 
-**Systems for coherent adaptation under unstable contexts.**
+**System-side adaptive coherence** — coordination, memory, and recalibration for agents and workflows under unstable contexts.
 
-Not another AI observability dashboard. Trajectory Drift is a calm coordination and calibration environment — for when adaptation drifts across agents, memory, and delegation chains, not just single-model outputs.
+Not another AI observability dashboard. A calm environment for when adaptation drifts across agents, delegation chains, and organizational memory — not just single-model outputs.
+
+**[trajectory-native](https://github.com/higuseonhye/trajectory-native)** explores human adaptation coherence.  
+**trajectory-drift** (this repo) explores system coordination coherence.
+
+Shared thesis: [adaptive coherence under unstable contexts](docs/adaptive-coherence.md).
 
 <p align="center">
   <img src="./assets/screenshots/dashboard-overview.png" alt="Multi-agent coordination workspace" width="800" />
 </p>
+
+---
+
+## Why observability is insufficient
+
+Observability explains what failed.
+
+Adaptive systems also require:
+
+- continuity
+- coordination coherence
+- adaptation memory
+- recovery-aware reasoning
+- contextual recalibration
+
+Trajectory Drift explores systems that remain coherent while adapting under unstable conditions.
 
 ---
 
@@ -28,6 +49,33 @@ Not another AI observability dashboard. Trajectory Drift is a calm coordination 
 - **Org memory** — team policies, incident patterns, persisted adaptation memory
 - **Calibration** — interpret drift · suggest recalibration
 - **Recovery & journal** — what stabilized · adaptation memory across runs
+
+Grounded examples: [coordination failure archive](docs/coordination-failures.md) · [drift taxonomy](docs/drift-taxonomy.md)
+
+---
+
+## Intended integration environments
+
+Trajectory Drift is designed for adaptive systems involving:
+
+- LangGraph workflows
+- MCP-connected systems
+- OpenAI agent orchestration
+- Claude tool pipelines
+- retrieval-heavy workflows
+- human-in-the-loop coordination environments
+- organizational memory systems
+
+---
+
+## Ecosystem
+
+| Repo | Layer |
+|------|--------|
+| **[trajectory-native](https://github.com/higuseonhye/trajectory-native)** | Founder calibration · weak-signal interpretation · human recalibration |
+| **trajectory-drift** (this repo) | Multi-agent handoffs · propagation diffs · org memory · coordination drift |
+
+---
 
 ## Live workspace
 
@@ -64,7 +112,7 @@ core/org-memory/      organizational memory & incident patterns
 app/                  calm workspace UI
 ```
 
-Strategic direction: [docs/STRATEGY.md](./docs/STRATEGY.md)
+**Docs:** [STRATEGY.md](docs/STRATEGY.md) · [PRODUCT.md](docs/PRODUCT.md) · [adaptive-coherence.md](docs/adaptive-coherence.md)
 
 ---
 

@@ -2,8 +2,15 @@
 
 | Doc | Description |
 |-----|-------------|
-| [PRODUCT.md](./PRODUCT.md) | Product positioning & demo scenario |
-| [launch/x-posts.md](./launch/x-posts.md) | Suggested X.com launch copy |
+| [adaptive-coherence.md](./adaptive-coherence.md) | Shared thesis — human + system layers |
+| [PRODUCT.md](./PRODUCT.md) | Product positioning & demos |
+| [STRATEGY.md](./STRATEGY.md) | Strategic direction |
+| [coordination-failures.md](./coordination-failures.md) | Operational failure archive |
+| [drift-taxonomy.md](./drift-taxonomy.md) | Coordination drift categories |
+| [launch/x-post-coordination.md](./launch/x-post-coordination.md) | X copy — coordination update |
+| [launch/x-post-ecosystem.md](./launch/x-post-ecosystem.md) | X copy — native + drift ecosystem |
+
+**Sibling repo:** [trajectory-native](https://github.com/higuseonhye/trajectory-native) — [calibration archive](https://github.com/higuseonhye/trajectory-native/blob/main/docs/calibration-archive.md)
 
 ## Assets
 

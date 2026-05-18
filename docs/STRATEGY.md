@@ -68,6 +68,17 @@ Every conceptual layer must connect to real workflows and measurable patterns �
 
 ## Brand line
 
-**Systems for coherent adaptation under unstable contexts.**
+**Adaptive coherence under unstable contexts.**
 
 Not: *AI observability SaaS.*
+
+---
+
+## Ecosystem
+
+| Repo | Layer |
+|------|--------|
+| [trajectory-native](https://github.com/higuseonhye/trajectory-native) | Human adaptation — founder calibration, weak signals |
+| trajectory-drift | System adaptation — coordination, propagation, org memory |
+
+Shared doc: [adaptive-coherence.md](./adaptive-coherence.md)
