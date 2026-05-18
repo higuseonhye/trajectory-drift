@@ -5,7 +5,7 @@
 Not another AI observability dashboard. Trajectory Drift is a calm coordination and calibration environment — for when adaptation drifts across agents, memory, and delegation chains, not just single-model outputs.
 
 <p align="center">
-  <img src="./assets/screenshots/dashboard-overview.png" alt="Calibration workspace" width="800" />
+  <img src="./assets/screenshots/dashboard-overview.png" alt="Multi-agent coordination workspace" width="800" />
 </p>
 
 ---
@@ -36,23 +36,19 @@ npm install && npm run dev
 # → http://localhost:3001/dashboard
 ```
 
-Demo loads automatically. No setup theater.
+Demo loads automatically. Toggle **Single** / **Multi-agent** in the workspace.
 
 ---
 
 ## Screenshots
 
 <p align="center">
-  <img src="./assets/screenshots/dashboard-overview.png" alt="Calibration workspace — coherence, journal, recalibration" width="800" />
+  <img src="./assets/screenshots/dashboard-overview.png" alt="Coordination, human–AI, and org memory panels" width="800" />
 </p>
 
 <p align="center">
-  <img src="./assets/screenshots/graph-closeup.png" alt="Trajectory graph" width="420" />
-  <img src="./assets/screenshots/calibration-panel.png" alt="Recalibration suggestions" width="420" />
-</p>
-
-<p align="center">
-  <img src="./assets/screenshots/journal-panel.png" alt="Calibration journal — adaptation memory" width="720" />
+  <img src="./assets/screenshots/multi-lane-graph.png" alt="Multi-agent swimlane graph" width="420" />
+  <img src="./assets/screenshots/propagation-diff.png" alt="Field-level propagation diffs" width="420" />
 </p>
 
 ---

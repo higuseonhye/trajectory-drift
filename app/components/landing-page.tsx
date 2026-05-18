@@ -82,15 +82,15 @@ export function LandingPage() {
           <p className="label-caps">Screenshots</p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             <Image
-              src="/assets/screenshots/graph-closeup.png"
-              alt="Trajectory graph"
+              src="/assets/screenshots/multi-lane-graph.png"
+              alt="Multi-agent swimlane graph"
               width={400}
               height={280}
               className="rounded-md border border-[var(--border-subtle)]"
             />
             <Image
-              src="/assets/screenshots/calibration-panel.png"
-              alt="Recalibration"
+              src="/assets/screenshots/propagation-diff.png"
+              alt="Field propagation diffs"
               width={400}
               height={280}
               className="rounded-md border border-[var(--border-subtle)]"
