@@ -69,4 +69,15 @@ export {
   createEmptyMemory,
   detectWeakSignals,
   forecastTrajectoryInstability,
+  getCoherenceIndicator,
+  COHERENCE_INDICATORS,
+  assessContextQuality,
+  getDryObservation,
+} from "./calibration";
+export type {
+  CoherenceIndicator,
+  ContextQualityKind,
+  ContextQualitySignal,
+  JournalEntry,
+  RecoveryNote,
 } from "./calibration";

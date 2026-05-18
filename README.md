@@ -2,134 +2,72 @@
 
 **Adaptive trajectory calibration for AI systems.**
 
-Detecting drift is only the first step. The real goal is **maintaining trajectory stability under changing contexts** — through observation, interpretation, recalibration, and adaptation.
+Detecting drift is only the first step. The real goal is **maintaining coherent behavior under changing contexts** — in noisy, low-signal environments where adaptation matters more than alerts.
 
 <p align="center">
-  <img src="./assets/screenshots/dashboard-overview.png" alt="Trajectory Drift calibration dashboard" width="900" />
-</p>
-
-<p align="center">
-  <a href="#quick-start">Quick start</a> ·
-  <a href="/dashboard">Live demo</a> ·
-  <a href="docs/PRODUCT.md">Product</a>
+  <img src="./assets/screenshots/dashboard-overview.png" alt="Calibration workspace" width="800" />
 </p>
 
 ---
 
-## The shift
+## What this is
 
-| Before | Now |
-|--------|-----|
-| Observe → detect drift | Observe → detect → **interpret** → **recalibrate** → **adapt** |
-| Execution errors | Failures of **adaptation and calibration** under uncertainty |
-| Monitoring dashboard | **Behavioral adaptation** system |
+A **calm calibration environment** — not a monitoring dashboard.
 
-AI failures are not only wrong outputs. They are breakdowns in how systems maintain coherent behavior over time.
+| Not this | This |
+|----------|------|
+| Alert overload | Reflective observation |
+| Performance scores | Coherence signals |
+| Error logging | Adaptation memory |
+| Panic aesthetics | Composed interaction |
 
----
+## Capabilities
 
-## What it does
+- **Coherence indicators** — trajectory stable · coherence weakening · grounding unstable
+- **Context quality** — stale attachment, weak grounding, excessive carry-over
+- **Calibration layer** — interpret drift · suggest behavioral recalibration
+- **Recovery** — what stabilized · what was learned
+- **Calibration journal** — observed → interpreted → adapted → outcome
+- **Forecast** — whether continuity is likely to degrade
 
-### Calibration layer
-Interprets *why* trajectories drift and suggests **behavioral recalibration** — not alarm-style error logs.
-
-> *The system appears to over-weight conversational carry-over while under-weighting retrieval grounding.*
->
-> **Suggested calibration:** increase retrieval priority · insert grounding checkpoint · reduce memory carry-over weight
-
-### Weak signal interpretation
-Treats subtle patterns as instability precursors: retries, hesitation loops, retrieval avoidance, chain instability, context carry-over.
-
-### Trajectory forecasting
-Estimates whether a run is **likely becoming unstable** — enabling proactive calibration.
-
-### Calibration memory
-Tracks prior drift events, corrections, and stabilization patterns (local persistence, MVP).
-
----
-
-## Screenshots
-
-### Calibration dashboard
-Continuity score, instability forecast, weak signals, and the calibration layer — one surface.
-
-<p align="center">
-  <img src="./assets/screenshots/dashboard-overview.png" alt="Calibration dashboard overview" width="800" />
-</p>
-
-### Trajectory graph · Calibration panel · Timeline replay
-
-<p align="center">
-  <img src="./assets/screenshots/graph-closeup.png" alt="Trajectory graph with drift highlights" width="480" />
-  <img src="./assets/screenshots/calibration-panel.png" alt="Calibration layer with recalibration suggestions" width="480" />
-</p>
-
-<p align="center">
-  <img src="./assets/screenshots/timeline-replay.png" alt="Execution timeline replay" width="800" />
-</p>
-
----
-
-## Live demo
-
-Zero-click demo — sample scenario loads automatically:
+## Live workspace
 
 ```bash
 npm install && npm run dev
 # → http://localhost:3001/dashboard
 ```
 
-Landing: `http://localhost:3001`
+Demo loads automatically. No setup theater.
+
+---
+
+## Screenshots
+
+<p align="center">
+  <img src="./assets/screenshots/dashboard-overview.png" alt="Calibration workspace — coherence, journal, recalibration" width="800" />
+</p>
+
+<p align="center">
+  <img src="./assets/screenshots/graph-closeup.png" alt="Trajectory graph" width="420" />
+  <img src="./assets/screenshots/calibration-panel.png" alt="Recalibration suggestions" width="420" />
+</p>
+
+<p align="center">
+  <img src="./assets/screenshots/journal-panel.png" alt="Calibration journal — adaptation memory" width="720" />
+</p>
 
 ---
 
 ## Architecture
 
 ```
-core/
-  drift/         # Detection
-  calibration/   # Interpret, forecast, memory
-  report/        # Structured findings
-ingestion/       # Log pipeline
-app/             # Landing + calibration UI
+core/drift/          detection
+core/calibration/    interpret · context · recovery · journal
+app/                 calm workspace UI
 ```
-
-**Pipeline:** `ingest → detect → calibrate → persist memory`
-
----
-
-## Quick start
-
-```bash
-git clone https://github.com/higuseonhye/trajectory-drift.git
-cd trajectory-drift
-npm install
-npm run dev
-```
-
-Log format: `{ "reference": { "steps": [...] }, "actual": { "steps": [...] } }`  
-Sample: [`public/demo-agent-run.json`](public/demo-agent-run.json)
-
----
-
-## Scripts
-
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Dev server (port 3001) |
-| `npm run build` | Production build |
-| `npm run typecheck` | TypeScript |
-
----
-
-## Roadmap
-
-- [ ] Production embedding providers
-- [ ] API ingestion + team calibration memory
-- [ ] Reinforcement from stabilization outcomes
 
 ---
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT

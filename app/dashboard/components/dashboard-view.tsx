@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   DriftEngine,
+  getCoherenceIndicator,
   HashEmbeddingProvider,
   type CalibrationInsight,
   type CalibrationResult,
@@ -21,11 +22,12 @@ import {
   saveCalibrationMemory,
 } from "../lib/calibration-memory-store";
 import { collectDriftStepIds } from "../lib/drift-steps";
+import { CalibrationJournal } from "./calibration-journal";
 import { CalibrationPanel } from "./calibration-panel";
+import { CoherencePanel } from "./coherence-panel";
 import { DashboardShell } from "./dashboard-shell";
 import { JsonUpload } from "./json-upload";
 import { ScenarioBanner } from "./scenario-banner";
-import { StabilityPanel } from "./stability-panel";
 import { TimelineReplay } from "./timeline-replay";
 import { TrajectoryGraphView } from "./trajectory-graph";
 
@@ -49,6 +51,9 @@ export function DashboardView() {
   );
 
   const stabilityLevel = calibration?.stabilityLevel ?? "stable";
+  const coherenceLabel = calibration
+    ? getCoherenceIndicator(calibration.stabilityLevel).label
+    : null;
   const activeStepId = actual?.steps[activeIndex]?.id ?? null;
   const ready = !loading && result !== null && calibration !== null;
 
@@ -71,14 +76,17 @@ export function DashboardView() {
       setFileName(name);
       try {
         const raw = JSON.parse(text) as unknown;
-        const priorMemory = loadCalibrationMemory();
-        const data = await runIngestionPipeline(raw, engine, priorMemory);
+        const data = await runIngestionPipeline(
+          raw,
+          engine,
+          loadCalibrationMemory(),
+        );
         applyResult(data);
       } catch (err) {
         setResult(null);
         setCalibration(null);
         setActual(null);
-        setError(err instanceof Error ? err.message : "Failed to process logs");
+        setError(err instanceof Error ? err.message : "Could not read this run");
       } finally {
         setLoading(false);
       }
@@ -93,16 +101,17 @@ export function DashboardView() {
 
     async function bootstrap() {
       setLoading(true);
-      setError(null);
       setFileName(DEMO_LOG_NAME);
       try {
-        const priorMemory = loadCalibrationMemory();
-        const data = await fetchAndIngest(DEMO_LOG_URL, engine, priorMemory);
-        if (cancelled) return;
-        applyResult(data);
+        const data = await fetchAndIngest(
+          DEMO_LOG_URL,
+          engine,
+          loadCalibrationMemory(),
+        );
+        if (!cancelled) applyResult(data);
       } catch (err) {
         if (!cancelled) {
-          setError(err instanceof Error ? err.message : "Failed to load demo");
+          setError(err instanceof Error ? err.message : "Could not load demo");
         }
       } finally {
         if (!cancelled) setLoading(false);
@@ -117,8 +126,7 @@ export function DashboardView() {
 
   const handleStepSelect = useCallback(
     (stepId: string) => {
-      if (!actual) return;
-      const index = actual.steps.findIndex((s) => s.id === stepId);
+      const index = actual?.steps.findIndex((s) => s.id === stepId) ?? -1;
       if (index >= 0) setActiveIndex(index);
     },
     [actual],
@@ -135,28 +143,21 @@ export function DashboardView() {
 
   const graph = result?.graphs.actual ?? null;
 
-  const status = fileName ? (
-    <p className="text-xs text-zinc-500">
-      {loading ? (
-        <>Calibrating <span className="font-mono text-zinc-400">{fileName}</span>…</>
-      ) : ready ? (
-        <>
-          <span className="font-mono text-zinc-400">{fileName}</span>
-          {" · "}
-          continuity {calibration?.continuityScore}/100
-        </>
-      ) : null}
-    </p>
-  ) : null;
+  const status =
+    ready && coherenceLabel ? (
+      <span className="text-xs text-zinc-600">{coherenceLabel}</span>
+    ) : loading ? (
+      <span className="text-xs text-zinc-600">Observing…</span>
+    ) : null;
 
   return (
     <DashboardShell
       status={status}
       actions={
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
           <Link
             href="/"
-            className="hidden text-xs text-zinc-500 transition hover:text-zinc-300 sm:block"
+            className="text-xs text-zinc-600 transition hover:text-zinc-400"
           >
             Home
           </Link>
@@ -165,43 +166,22 @@ export function DashboardView() {
       }
     >
       {error && (
-        <p className="border-b border-rose-900/30 bg-rose-950/20 px-6 py-2 text-center text-sm text-rose-300/90">
+        <p className="border-b border-[var(--border-subtle)] px-6 py-3 text-center text-sm text-zinc-500">
           {error}
         </p>
       )}
 
       <div className="flex flex-1 overflow-hidden">
-        <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-4 overflow-y-auto p-5">
-          {ready && calibration && (
-            <ScenarioBanner calibration={calibration} />
-          )}
+        <main className="mx-auto flex w-full max-w-4xl flex-1 flex-col gap-8 overflow-y-auto px-6 py-8">
+          {ready && calibration && <ScenarioBanner calibration={calibration} />}
 
-          <div className="grid flex-1 gap-4 lg:grid-cols-3">
-            <section className="panel flex flex-col p-3 lg:col-span-2">
-              <div className="mb-3 flex items-center justify-between px-1">
-                <h2 className="text-xs font-semibold uppercase tracking-wider text-zinc-500">
-                  Trajectory graph
-                </h2>
-                <div className="flex gap-3 text-[10px] text-zinc-600">
-                  <span className="flex items-center gap-1">
-                    <span className="h-2 w-2 rounded-full bg-emerald-500/70" />
-                    Stable
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <span className="h-2 w-2 rounded-full bg-amber-500/80" />
-                    Unstable
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <span className="h-2 w-2 rounded-full bg-rose-400/70" />
-                    Elevated risk
-                  </span>
-                </div>
-              </div>
+          <div className="grid gap-8 lg:grid-cols-[1fr_280px]">
+            <section className="panel min-h-[400px] p-4">
+              <p className="label-caps mb-4 px-1">Trajectory</p>
               {loading ? (
-                <div className="flex min-h-[380px] flex-1 flex-col items-center justify-center gap-3 text-sm text-zinc-500">
-                  <span className="h-7 w-7 animate-spin rounded-full border-2 border-zinc-700 border-t-blue-500/80" />
-                  Observing trajectory continuity…
-                </div>
+                <p className="flex min-h-[360px] items-center justify-center prose-calm">
+                  Observing…
+                </p>
               ) : graph ? (
                 <TrajectoryGraphView
                   graph={graph}
@@ -211,16 +191,18 @@ export function DashboardView() {
                   onStepSelect={handleStepSelect}
                 />
               ) : (
-                <div className="flex min-h-[380px] items-center justify-center text-sm text-zinc-500">
-                  No trajectory data.
-                </div>
+                <p className="flex min-h-[360px] items-center justify-center prose-calm">
+                  No trajectory yet.
+                </p>
               )}
             </section>
 
-            <section className="min-h-[380px] lg:col-span-1">
-              <StabilityPanel calibration={calibration} loading={loading} />
-            </section>
+            <CoherencePanel calibration={calibration} loading={loading} />
           </div>
+
+          {ready && calibration && (
+            <CalibrationJournal calibration={calibration} />
+          )}
 
           <TimelineReplay
             steps={actual?.steps ?? []}

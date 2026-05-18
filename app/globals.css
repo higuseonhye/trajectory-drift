@@ -1,17 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --background: #09090b;
-  --foreground: #fafafa;
-  --surface: #111113;
+  --background: #0c0c0e;
+  --foreground: #e4e4e7;
+  --surface: #121214;
   --surface-elevated: #18181b;
   --border: #27272a;
-  --border-subtle: #1f1f23;
-  --muted: #a1a1aa;
-  --accent: #3b82f6;
-  --accent-glow: rgba(59, 130, 246, 0.15);
-  --danger: #ef4444;
-  --success: #22c55e;
+  --border-subtle: #1c1c1f;
+  --muted: #71717a;
+  --muted-soft: #52525b;
+  --accent: #a1a1aa;
+  --accent-soft: #3f3f46;
+  --signal-stable: #6ee7b7;
+  --signal-weakening: #fcd34d;
+  --signal-unstable: #f9a8d4;
 }
 
 @theme inline {
@@ -29,18 +31,34 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
+  letter-spacing: -0.01em;
 }
 
 ::selection {
-  background: rgba(59, 130, 246, 0.35);
+  background: rgba(161, 161, 170, 0.25);
 }
 
 .panel {
-  border: 1px solid var(--border);
-  background: var(--surface-elevated);
-  border-radius: 0.75rem;
+  border: 1px solid var(--border-subtle);
+  background: var(--surface);
+  border-radius: 0.5rem;
 }
 
-.glow-accent {
-  box-shadow: 0 0 80px var(--accent-glow);
+.panel-ghost {
+  border: 1px solid transparent;
+  background: transparent;
+}
+
+.label-caps {
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.prose-calm {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--muted);
 }

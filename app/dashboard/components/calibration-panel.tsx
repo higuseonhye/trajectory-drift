@@ -1,6 +1,7 @@
 "use client";
 
 import type { CalibrationInsight, CalibrationResult } from "@/core";
+import { RecoveryPanel } from "./recovery-panel";
 
 interface CalibrationPanelProps {
   calibration: CalibrationResult | null;
@@ -16,111 +17,56 @@ export function CalibrationPanel({
   onSelectInsight,
 }: CalibrationPanelProps) {
   return (
-    <aside className="flex w-full shrink-0 flex-col border-l border-[var(--border)] bg-[var(--surface)] lg:w-[22rem] xl:w-[26rem]">
-      <div className="border-b border-[var(--border)] px-4 py-4">
-        <h2 className="text-xs font-semibold uppercase tracking-wider text-zinc-500">
-          Calibration layer
-        </h2>
-        <p className="mt-1 text-sm leading-relaxed text-zinc-400">
-          Interpret → recalibrate → adapt
+    <aside className="flex w-full shrink-0 flex-col border-l border-[var(--border-subtle)] bg-[var(--surface)] lg:w-80 xl:w-96">
+      <div className="px-5 py-5">
+        <p className="label-caps">Recalibration</p>
+        <p className="mt-1 text-sm text-zinc-500">
+          Interpret · adjust · learn
         </p>
       </div>
 
       {loading ? (
-        <div className="flex flex-1 items-center justify-center p-6 text-sm text-zinc-500">
-          Interpreting trajectory behavior…
-        </div>
+        <p className="flex flex-1 items-center justify-center p-8 prose-calm">
+          Reflecting on this run…
+        </p>
       ) : !calibration ? (
-        <div className="flex flex-1 items-center justify-center p-6 text-sm text-zinc-500">
-          No calibration data.
-        </div>
+        <p className="flex flex-1 items-center justify-center p-8 prose-calm">
+          No data yet.
+        </p>
       ) : (
         <>
-          <div className="border-b border-[var(--border)] px-4 py-4">
-            <p className="text-xs leading-relaxed text-zinc-400">
-              {calibration.globalSummary}
-            </p>
+          <div className="border-t border-[var(--border-subtle)] px-5 py-4">
+            <p className="prose-calm">{calibration.globalSummary}</p>
           </div>
 
-          {calibration.memory.entries.length > 0 && (
-            <div className="border-b border-[var(--border)] px-4 py-3">
-              <p className="text-[10px] font-semibold uppercase tracking-wider text-zinc-600">
-                Calibration memory
-              </p>
-              <p className="mt-1 text-[11px] text-zinc-500">
-                {calibration.memory.entries.length} recorded adaptation
-                {calibration.memory.entries.length === 1 ? "" : "s"}
-                {calibration.memory.patterns.recurringDriftKinds.length > 0 && (
-                  <>
-                    {" "}
-                    · recurring:{" "}
-                    {calibration.memory.patterns.recurringDriftKinds.join(", ")}
-                  </>
-                )}
-              </p>
-            </div>
-          )}
-
-          <ul className="flex-1 space-y-2 overflow-y-auto p-3">
-            {calibration.insights.length === 0 ? (
-              <li className="px-2 text-sm text-zinc-500">
-                No recalibration points required.
-              </li>
-            ) : (
-              calibration.insights.map((insight) => (
-                <li key={insight.id}>
-                  <button
-                    type="button"
-                    onClick={() => onSelectInsight?.(insight)}
-                    className={`w-full rounded-lg border p-3 text-left transition ${
-                      selectedInsightId === insight.id
-                        ? "border-blue-500/40 bg-blue-500/5"
-                        : "border-[var(--border)] bg-[var(--surface-elevated)] hover:border-zinc-600"
-                    }`}
-                  >
-                    {insight.relatedIssueKind && (
-                      <p className="mb-2 text-[10px] font-medium uppercase tracking-wide text-zinc-500">
-                        {insight.relatedIssueKind.replace(/_/g, " ")}
-                      </p>
-                    )}
-
-                    <p className="text-xs leading-relaxed text-zinc-300">
-                      {insight.interpretation}
+          <ul className="flex-1 space-y-1 overflow-y-auto px-3 py-2">
+            {calibration.insights.map((insight) => (
+              <li key={insight.id}>
+                <button
+                  type="button"
+                  onClick={() => onSelectInsight?.(insight)}
+                  className={`w-full rounded-md px-3 py-3 text-left transition ${
+                    selectedInsightId === insight.id
+                      ? "bg-zinc-800/60"
+                      : "hover:bg-zinc-800/30"
+                  }`}
+                >
+                  <p className="text-sm leading-relaxed text-zinc-300">
+                    {insight.interpretation}
+                  </p>
+                  {insight.suggestedCalibration.length > 0 && (
+                    <p className="mt-2 text-xs text-zinc-600">
+                      {insight.suggestedCalibration
+                        .map((c) => c.label)
+                        .join(" · ")}
                     </p>
-
-                    <ul className="mt-2 space-y-1">
-                      {insight.instabilityFactors.map((f) => (
-                        <li
-                          key={f}
-                          className="text-[10px] text-zinc-600 before:mr-1.5 before:content-['·']"
-                        >
-                          {f}
-                        </li>
-                      ))}
-                    </ul>
-
-                    <div className="mt-3 border-t border-[var(--border)] pt-3">
-                      <p className="text-[10px] font-semibold uppercase tracking-wider text-zinc-600">
-                        Suggested calibration
-                      </p>
-                      <ul className="mt-2 space-y-2">
-                        {insight.suggestedCalibration.map((action) => (
-                          <li key={action.label}>
-                            <p className="text-xs font-medium text-zinc-300">
-                              {action.label}
-                            </p>
-                            <p className="mt-0.5 text-[11px] leading-relaxed text-zinc-500">
-                              {action.rationale}
-                            </p>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </button>
-                </li>
-              ))
-            )}
+                  )}
+                </button>
+              </li>
+            ))}
           </ul>
+
+          <RecoveryPanel calibration={calibration} />
         </>
       )}
     </aside>

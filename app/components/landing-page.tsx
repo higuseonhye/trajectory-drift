@@ -3,164 +3,104 @@ import Link from "next/link";
 
 const FEATURES = [
   {
-    title: "Continuity assessment",
+    title: "Observe & stabilize",
     description:
-      "Measure how well a live trajectory maintains alignment with a reference behavioral model over time.",
+      "See how agent behavior holds together — or slowly comes apart — across a run.",
   },
   {
-    title: "Calibration layer",
+    title: "Context quality",
     description:
-      "Interpret why adaptation drifted and recommend behavioral recalibration — calm, systems-oriented guidance.",
+      "Stale attachment, weak grounding, excessive carry-over — measured as coherence, not noise.",
   },
   {
-    title: "Weak signals & forecast",
+    title: "Adaptation memory",
     description:
-      "Surface instability precursors and estimate whether continuity is likely to degrade.",
+      "What was observed, what was tried, what stabilized. A journal for coherent recovery.",
   },
 ];
 
 export function LandingPage() {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="border-b border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-md">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-xs font-bold text-white">
-              TD
-            </span>
-            <span className="font-semibold tracking-tight">Trajectory Drift</span>
+      <header className="border-b border-[var(--border-subtle)]">
+        <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-5">
+          <Link href="/" className="text-sm font-medium text-zinc-300">
+            Trajectory Drift
           </Link>
-          <nav className="flex items-center gap-4 text-sm">
-            <a href="#product" className="text-zinc-400 transition hover:text-white">
-              Product
-            </a>
-            <a href="#screenshots" className="text-zinc-400 transition hover:text-white">
-              Screenshots
-            </a>
-            <Link
-              href="/dashboard"
-              className="rounded-lg bg-blue-600 px-4 py-2 font-medium text-white transition hover:bg-blue-500"
-            >
-              Open dashboard
-            </Link>
-          </nav>
+          <Link
+            href="/dashboard"
+            className="text-sm text-zinc-500 transition hover:text-zinc-300"
+          >
+            Open workspace →
+          </Link>
         </div>
       </header>
 
-      <main>
-        <section className="relative overflow-hidden border-b border-[var(--border)] px-6 py-20">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--accent-glow),_transparent_55%)]" />
-          <div className="relative mx-auto max-w-6xl">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-blue-400/90">
-              Adaptive trajectory calibration
-            </p>
-            <h1 className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
-              Maintain coherent AI behavior under uncertainty
-            </h1>
-            <p className="mt-4 max-w-2xl text-lg leading-relaxed text-zinc-400">
-              Trajectory Drift observes agent execution, detects behavioral drift,
-              interprets instability, and suggests recalibration — so systems adapt
-              instead of silently degrading.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                href="/dashboard"
-                className="rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-blue-500"
-              >
-                View live demo
-              </Link>
-              <a
-                href="#screenshots"
-                className="rounded-lg border border-[var(--border)] px-5 py-2.5 text-sm font-medium text-zinc-300 transition hover:border-zinc-600 hover:text-white"
-              >
-                See screenshots
-              </a>
+      <main className="mx-auto w-full max-w-3xl px-6 py-16 sm:py-24">
+        <p className="label-caps">Adaptive calibration</p>
+        <h1 className="mt-4 text-3xl font-medium leading-snug tracking-tight text-zinc-100 sm:text-4xl">
+          Coherent adaptation under unstable conditions
+        </h1>
+        <p className="mt-6 max-w-xl text-base leading-relaxed text-zinc-500">
+          A calm environment for observing drift, stabilizing context, and learning
+          from recovery — not another monitoring dashboard.
+        </p>
+        <p className="mt-4 text-sm italic text-zinc-600">
+          The agent ignored retrieval again. Confidence remained excellent.
+        </p>
+
+        <div className="mt-10 flex gap-4">
+          <Link
+            href="/dashboard"
+            className="border-b border-zinc-500 pb-0.5 text-sm text-zinc-300 transition hover:border-zinc-300"
+          >
+            View live workspace
+          </Link>
+        </div>
+
+        <div className="mt-16 overflow-hidden rounded-md border border-[var(--border-subtle)]">
+          <Image
+            src="/assets/screenshots/dashboard-overview.png"
+            alt="Trajectory Drift workspace"
+            width={900}
+            height={506}
+            className="w-full"
+            priority
+          />
+        </div>
+
+        <section id="product" className="mt-20 space-y-10 border-t border-[var(--border-subtle)] pt-16">
+          {FEATURES.map((f) => (
+            <div key={f.title}>
+              <h2 className="text-sm font-medium text-zinc-300">{f.title}</h2>
+              <p className="mt-2 prose-calm max-w-lg">{f.description}</p>
             </div>
-          </div>
-          <div className="relative mx-auto mt-14 max-w-6xl glow-accent">
+          ))}
+        </section>
+
+        <section id="screenshots" className="mt-20 border-t border-[var(--border-subtle)] pt-16">
+          <p className="label-caps">Screenshots</p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
             <Image
-              src="/assets/screenshots/dashboard-overview.png"
-              alt="Trajectory Drift dashboard overview"
-              width={1200}
-              height={675}
-              className="rounded-xl border border-[var(--border)] shadow-2xl"
-              priority
+              src="/assets/screenshots/graph-closeup.png"
+              alt="Trajectory graph"
+              width={400}
+              height={280}
+              className="rounded-md border border-[var(--border-subtle)]"
             />
-          </div>
-        </section>
-
-        <section id="product" className="border-b border-[var(--border)] px-6 py-16">
-          <div className="mx-auto max-w-6xl">
-            <h2 className="text-2xl font-semibold tracking-tight">
-              Behavioral adaptation infrastructure
-            </h2>
-            <p className="mt-2 max-w-2xl text-zinc-400">
-              Not a monitoring dashboard. A system that helps AI maintain stable
-              trajectories as context changes.
-            </p>
-            <div className="mt-10 grid gap-6 sm:grid-cols-3">
-              {FEATURES.map((f) => (
-                <div key={f.title} className="panel p-5">
-                  <h3 className="font-medium">{f.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                    {f.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="screenshots" className="px-6 py-16">
-          <div className="mx-auto max-w-6xl">
-            <h2 className="text-2xl font-semibold tracking-tight">Product visuals</h2>
-            <p className="mt-2 text-zinc-400">
-              Graph visualization, drift reports, and execution replay — one surface.
-            </p>
-            <div className="mt-10 grid gap-6 md:grid-cols-2">
-              <figure className="panel overflow-hidden p-1">
-                <Image
-                  src="/assets/screenshots/graph-closeup.png"
-                  alt="Trajectory graph with drift highlights"
-                  width={600}
-                  height={400}
-                  className="rounded-lg"
-                />
-                <figcaption className="px-4 py-3 text-xs text-zinc-500">
-                  Trajectory graph — drift nodes highlighted in red
-                </figcaption>
-              </figure>
-              <figure className="panel overflow-hidden p-1">
-                <Image
-                  src="/assets/screenshots/calibration-panel.png"
-                  alt="Calibration layer with recalibration guidance"
-                  width={600}
-                  height={400}
-                  className="rounded-lg"
-                />
-                <figcaption className="px-4 py-3 text-xs text-zinc-500">
-                  Calibration layer — interpret, recalibrate, adapt
-                </figcaption>
-              </figure>
-              <figure className="panel overflow-hidden p-1 md:col-span-2">
-                <Image
-                  src="/assets/screenshots/timeline-replay.png"
-                  alt="Execution timeline replay"
-                  width={1200}
-                  height={400}
-                  className="rounded-lg"
-                />
-                <figcaption className="px-4 py-3 text-xs text-zinc-500">
-                  Timeline replay — step through agent execution
-                </figcaption>
-              </figure>
-            </div>
+            <Image
+              src="/assets/screenshots/calibration-panel.png"
+              alt="Recalibration"
+              width={400}
+              height={280}
+              className="rounded-md border border-[var(--border-subtle)]"
+            />
           </div>
         </section>
       </main>
 
-      <footer className="mt-auto border-t border-[var(--border)] px-6 py-8 text-center text-xs text-zinc-500">
-        Trajectory Drift · AI agent observability MVP
+      <footer className="mt-auto border-t border-[var(--border-subtle)] px-6 py-8 text-center text-xs text-zinc-600">
+        Observe · stabilize · learn · recover · adapt
       </footer>
     </div>
   );

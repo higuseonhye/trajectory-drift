@@ -1,4 +1,7 @@
 import type { DriftIssueKind } from "../types";
+import type { ContextQualitySignal } from "./context-quality";
+import type { JournalEntry } from "./journal";
+import type { RecoveryNote } from "./recovery";
 
 /** Trajectory behavioral stability classification. */
 export type StabilityLevel = "stable" | "unstable" | "elevated_risk";
@@ -49,6 +52,7 @@ export interface CalibrationMemoryEntry {
   driftKinds: DriftIssueKind[];
   corrections: string[];
   stabilized: boolean;
+  interpretation?: string;
 }
 
 export interface CalibrationMemory {
@@ -65,6 +69,10 @@ export interface CalibrationResult {
   weakSignals: WeakSignal[];
   forecast: TrajectoryForecast;
   insights: CalibrationInsight[];
+  contextQuality: ContextQualitySignal[];
+  recovery: RecoveryNote[];
+  journal: JournalEntry[];
+  observation: string;
   globalSummary: string;
   memory: CalibrationMemory;
 }

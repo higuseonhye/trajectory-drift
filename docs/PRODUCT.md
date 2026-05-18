@@ -1,67 +1,31 @@
-# Product overview
+# Product direction
 
-**Trajectory Drift** is adaptive trajectory calibration infrastructure for AI systems.
+**Trajectory Drift** helps AI systems maintain **coherent adaptation under unstable, noisy, low-context environments**.
 
-Detecting drift is only the first step. The product helps systems **maintain behavioral stability under changing contexts** through interpret → recalibrate → adapt.
+This is not a monitoring dashboard. It is a **calm calibration environment** — a surface for observing drift, recovery, and learning.
 
 ## Flow
 
 ```
-observe → detect → interpret → recalibrate → adapt
+observe → stabilize → learn → recover → adapt
 ```
 
-1. **Observe** — Ingest agent execution trajectories.
-2. **Detect** — Measure deviation from a reference behavioral model.
-3. **Interpret** — Understand instability factors (not just errors).
-4. **Recalibrate** — Suggest behavioral adjustments.
-5. **Adapt** — Learn from calibration memory across runs.
+## Layers
 
-## Calibration layer
+| Layer | Role |
+|-------|------|
+| **Coherence indicators** | Trajectory stable · coherence weakening · grounding unstable |
+| **Context quality** | Stale context, carry-over, weak grounding |
+| **Calibration** | Interpret drift · suggest recalibration |
+| **Recovery** | What stabilized · what was learned |
+| **Journal** | Adaptation memory across runs |
 
-Each deviation produces:
+## Tone
 
-- Analytical interpretation (why adaptation drifted)
-- Instability factors
-- Suggested calibration actions (priority shifts, checkpoints, weight adjustments)
+- Observant, calm, humane, restrained
+- Dry humor from accurate observation — not entertainment
+- No panic, shame, or startup hype
 
-Tone: calm, systems-oriented — not alarm logging.
+## Philosophy
 
-## Weak signals
-
-Null or weak patterns are treated as meaningful precursors:
-
-- Retry patterns
-- Hesitation loops
-- Retrieval inconsistency / avoidance
-- Chain instability
-- Context carry-over
-
-## Trajectory forecasting
-
-Heuristic estimate of whether continuity is likely to degrade — enabling proactive recalibration.
-
-## Calibration memory
-
-Persists (local, MVP):
-
-- Prior drift events
-- Corrections applied
-- Whether runs stabilized after adaptation
-
-## Stability levels
-
-| Level | Meaning |
-|-------|---------|
-| **Stable** | Trajectory continuity holds |
-| **Unstable** | Early adaptation drift |
-| **Elevated risk** | Continuity likely to degrade without recalibration |
-
-## What this is NOT
-
-- A generic observability dashboard
-- A tracing or logging platform
-- A simple AI eval tool
-
-## Strategic focus
-
-Behavioral adaptation infrastructure: coherence over time, calibration under uncertainty, stable trajectories.
+AI systems are imperfect. Humans are too. The product helps both **adapt coherently**.

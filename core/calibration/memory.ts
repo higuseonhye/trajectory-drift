@@ -18,6 +18,7 @@ export function recordCalibrationEvent(
     driftKinds: DriftIssueKind[];
     corrections: string[];
     stabilized: boolean;
+    interpretation?: string;
   },
 ): CalibrationMemory {
   const entry: CalibrationMemoryEntry = {
@@ -28,6 +29,7 @@ export function recordCalibrationEvent(
     driftKinds: input.driftKinds,
     corrections: input.corrections,
     stabilized: input.stabilized,
+    interpretation: input.interpretation,
   };
 
   const entries = [entry, ...memory.entries].slice(0, 50);

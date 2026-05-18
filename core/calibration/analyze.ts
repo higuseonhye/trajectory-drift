@@ -6,6 +6,10 @@ import {
   memoryContextNote,
   recordCalibrationEvent,
 } from "./memory";
+import { assessContextQuality } from "./context-quality";
+import { buildJournalEntries } from "./journal";
+import { getDryObservation } from "./observations";
+import { buildRecoveryNotes } from "./recovery";
 import { buildCalibrationInsights, buildGlobalSummary } from "./interpret";
 import { detectWeakSignals } from "./weak-signals";
 import type {
@@ -64,13 +68,36 @@ export function runCalibration(
     analysis.actualTrajectoryId,
   );
 
+  const contextQuality = assessContextQuality(actual);
+  const recovery = buildRecoveryNotes(
+    stabilityLevel,
+    stabilized,
+    priorMemory,
+    corrections,
+  );
+  const observation = getDryObservation(stabilityLevel);
+
+  const interpretationSummary =
+    insights[0]?.interpretation ??
+    contextQuality[0]?.interpretation ??
+    "Continuity assessed";
+
   const memory = recordCalibrationEvent(priorMemory, {
     actualTrajectoryId: analysis.actualTrajectoryId,
     stabilityLevel,
     driftKinds,
     corrections,
     stabilized,
+    interpretation: interpretationSummary,
   });
+
+  const journal = buildJournalEntries(
+    insights,
+    contextQuality,
+    recovery,
+    memory,
+    analysis.actualTrajectoryId,
+  );
 
   const memoryNote = memoryContextNote(memory);
   const globalSummary = buildGlobalSummary(
@@ -86,6 +113,10 @@ export function runCalibration(
     weakSignals,
     forecast,
     insights,
+    contextQuality,
+    recovery,
+    journal,
+    observation,
     globalSummary,
     memory,
   };
