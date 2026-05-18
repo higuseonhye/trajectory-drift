@@ -81,3 +81,48 @@ export type {
   JournalEntry,
   RecoveryNote,
 } from "./calibration";
+
+// Coordination
+export type {
+  AgentLane,
+  CoordinationAgent,
+  CoordinationBundle,
+  CoordinationResult,
+  CoordinationSignal,
+  CoordinationSignalKind,
+  DelegationCoherenceLevel,
+  FieldPropagationDiff,
+  HandoffRecord,
+} from "./coordination";
+export {
+  runCoordinationAnalysis,
+  getCoordinationObservation,
+  diffAllHandoffs,
+  parseContextFields,
+} from "./coordination";
+
+// Human–AI coherence
+export type {
+  HumanAiBundle,
+  HumanAiCoherenceResult,
+  HumanAiCoherenceSignal,
+  HumanAiCoherenceLevel,
+  HumanAiInteraction,
+} from "./human-ai";
+export { runHumanAiCoherenceAnalysis } from "./human-ai";
+
+// Organizational memory
+export type {
+  OrgCoherenceLevel,
+  OrgIncident,
+  OrgMemoryBundle,
+  OrgMemoryEntry,
+  OrgMemoryResult,
+  OrgMemoryStore,
+  OrgPolicy,
+} from "./org-memory";
+export {
+  runOrgMemoryAnalysis,
+  createEmptyOrgMemory,
+  recordOrgPattern,
+} from "./org-memory";

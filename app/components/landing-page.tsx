@@ -3,19 +3,19 @@ import Link from "next/link";
 
 const FEATURES = [
   {
-    title: "Observe & stabilize",
+    title: "Coordination coherence",
     description:
-      "See how agent behavior holds together — or slowly comes apart — across a run.",
+      "Track how agents, handoffs, and delegated context hold together — or quietly diverge.",
   },
   {
-    title: "Context quality",
+    title: "Context continuity",
     description:
-      "Stale attachment, weak grounding, excessive carry-over — measured as coherence, not noise.",
+      "Stale memory, weak grounding, propagation gaps — measured as coherence, not alerts.",
   },
   {
-    title: "Adaptation memory",
+    title: "Adaptive calibration",
     description:
-      "What was observed, what was tried, what stabilized. A journal for coherent recovery.",
+      "Observe drift, recover continuity, learn from adaptation. A journal for resilient systems.",
   },
 ];
 
@@ -37,16 +37,16 @@ export function LandingPage() {
       </header>
 
       <main className="mx-auto w-full max-w-3xl px-6 py-16 sm:py-24">
-        <p className="label-caps">Adaptive calibration</p>
+        <p className="label-caps">Coherence infrastructure</p>
         <h1 className="mt-4 text-3xl font-medium leading-snug tracking-tight text-zinc-100 sm:text-4xl">
-          Coherent adaptation under unstable conditions
+          Coherent adaptation under unstable contexts
         </h1>
         <p className="mt-6 max-w-xl text-base leading-relaxed text-zinc-500">
-          A calm environment for observing drift, stabilizing context, and learning
-          from recovery — not another monitoring dashboard.
+          A calm coordination and calibration environment for adaptive systems —
+          single agents, multi-agent workflows, and everything that propagates between them.
         </p>
         <p className="mt-4 text-sm italic text-zinc-600">
-          The agent ignored retrieval again. Confidence remained excellent.
+          The agents agreed confidently. Grounding remained unresolved.
         </p>
 
         <div className="mt-10 flex gap-4">

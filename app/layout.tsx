@@ -16,12 +16,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3001",
   ),
-  title: "Trajectory Drift — Adaptive Trajectory Calibration",
+  title: "Trajectory Drift — Coherent Adaptation Under Unstable Contexts",
   description:
-    "Maintain AI behavioral stability under uncertainty. Observe, detect, interpret, recalibrate, and adapt agent trajectories over time.",
+    "A calm coordination and calibration environment for adaptive systems — coherence, context continuity, and delegation integrity.",
   openGraph: {
     title: "Trajectory Drift",
-    description: "Adaptive trajectory calibration for AI systems.",
+    description: "Systems for coherent adaptation under unstable contexts.",
     images: ["/assets/screenshots/dashboard-overview.png"],
   },
 };

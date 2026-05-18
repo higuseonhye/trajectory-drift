@@ -12,21 +12,33 @@ import {
   type Trajectory,
 } from "@/core";
 import {
-  DEMO_LOG_NAME,
-  DEMO_LOG_URL,
+  DEMOS,
+  type DemoMode,
   fetchAndIngest,
   runIngestionPipeline,
 } from "@/ingestion";
+import type {
+  CoordinationResult,
+  HumanAiCoherenceResult,
+  OrgMemoryResult,
+} from "@/core";
 import {
   loadCalibrationMemory,
   saveCalibrationMemory,
 } from "../lib/calibration-memory-store";
+import { loadOrgMemory, saveOrgMemory } from "../lib/org-memory-store";
 import { collectDriftStepIds } from "../lib/drift-steps";
 import { CalibrationJournal } from "./calibration-journal";
 import { CalibrationPanel } from "./calibration-panel";
 import { CoherencePanel } from "./coherence-panel";
 import { DashboardShell } from "./dashboard-shell";
 import { JsonUpload } from "./json-upload";
+import { CoordinationPanel } from "./coordination-panel";
+import { DemoSwitcher } from "./demo-switcher";
+import { HumanAiPanel } from "./human-ai-panel";
+import { MultiLaneGraph } from "./multi-lane-graph";
+import { OrgMemoryPanel } from "./org-memory-panel";
+import { PropagationDiffPanel } from "./propagation-diff-panel";
 import { ScenarioBanner } from "./scenario-banner";
 import { TimelineReplay } from "./timeline-replay";
 import { TrajectoryGraphView } from "./trajectory-graph";
@@ -37,7 +49,13 @@ const engine = new DriftEngine({ embeddingProvider: embedder });
 export function DashboardView() {
   const [result, setResult] = useState<DriftAnalysisResult | null>(null);
   const [calibration, setCalibration] = useState<CalibrationResult | null>(null);
+  const [coordination, setCoordination] = useState<CoordinationResult | null>(
+    null,
+  );
+  const [humanAi, setHumanAi] = useState<HumanAiCoherenceResult | null>(null);
+  const [orgMemory, setOrgMemory] = useState<OrgMemoryResult | null>(null);
   const [actual, setActual] = useState<Trajectory | null>(null);
+  const [demoMode, setDemoMode] = useState<DemoMode>("single");
   const [fileName, setFileName] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -62,7 +80,11 @@ export function DashboardView() {
       setActual(data.actual);
       setResult(data.analysis);
       setCalibration(data.calibration);
+      setCoordination(data.coordination ?? null);
+      setHumanAi(data.humanAi ?? null);
+      setOrgMemory(data.orgMemory ?? null);
       saveCalibrationMemory(data.calibration.memory);
+      if (data.orgMemoryStore) saveOrgMemory(data.orgMemoryStore);
       setActiveIndex(0);
       setSelectedInsightId(null);
     },
@@ -76,15 +98,17 @@ export function DashboardView() {
       setFileName(name);
       try {
         const raw = JSON.parse(text) as unknown;
-        const data = await runIngestionPipeline(
-          raw,
-          engine,
-          loadCalibrationMemory(),
-        );
+        const data = await runIngestionPipeline(raw, engine, {
+          priorMemory: loadCalibrationMemory(),
+          orgMemoryStore: loadOrgMemory(),
+        });
         applyResult(data);
       } catch (err) {
         setResult(null);
         setCalibration(null);
+        setCoordination(null);
+        setHumanAi(null);
+        setOrgMemory(null);
         setActual(null);
         setError(err instanceof Error ? err.message : "Could not read this run");
       } finally {
@@ -101,13 +125,13 @@ export function DashboardView() {
 
     async function bootstrap() {
       setLoading(true);
-      setFileName(DEMO_LOG_NAME);
+      const demo = DEMOS[demoMode];
+      setFileName(demo.name);
       try {
-        const data = await fetchAndIngest(
-          DEMO_LOG_URL,
-          engine,
-          loadCalibrationMemory(),
-        );
+        const data = await fetchAndIngest(demo.url, engine, {
+          priorMemory: loadCalibrationMemory(),
+          orgMemoryStore: loadOrgMemory(),
+        });
         if (!cancelled) applyResult(data);
       } catch (err) {
         if (!cancelled) {
@@ -122,7 +146,35 @@ export function DashboardView() {
     return () => {
       cancelled = true;
     };
-  }, [applyResult]);
+  }, [applyResult, demoMode]);
+
+  const loadDemo = useCallback(
+    async (mode: DemoMode) => {
+      setDemoMode(mode);
+      setLoading(true);
+      setError(null);
+      const demo = DEMOS[mode];
+      setFileName(demo.name);
+      try {
+        const data = await fetchAndIngest(demo.url, engine, {
+          priorMemory: loadCalibrationMemory(),
+          orgMemoryStore: loadOrgMemory(),
+        });
+        applyResult(data);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "Could not load demo");
+      } finally {
+        setLoading(false);
+      }
+    },
+    [applyResult],
+  );
+
+  const displayScenario =
+    coordination?.scenario ??
+    (demoMode === "coordination"
+      ? "Multi-agent coordination"
+      : "Support agent · grounding under uncertainty");
 
   const handleStepSelect = useCallback(
     (stepId: string) => {
@@ -161,6 +213,11 @@ export function DashboardView() {
           >
             Home
           </Link>
+          <DemoSwitcher
+            mode={demoMode}
+            onChange={loadDemo}
+            disabled={loading}
+          />
           <JsonUpload onLoad={processLogs} disabled={loading} />
         </div>
       }
@@ -173,15 +230,44 @@ export function DashboardView() {
 
       <div className="flex flex-1 overflow-hidden">
         <main className="mx-auto flex w-full max-w-4xl flex-1 flex-col gap-8 overflow-y-auto px-6 py-8">
-          {ready && calibration && <ScenarioBanner calibration={calibration} />}
+          {ready && calibration && (
+            <ScenarioBanner
+              calibration={calibration}
+              scenarioTitle={displayScenario}
+              coordinationSummary={coordination?.summary}
+            />
+          )}
+
+          <div className="grid gap-6 lg:grid-cols-2">
+            {coordination && (
+              <CoordinationPanel coordination={coordination} loading={loading} />
+            )}
+            {humanAi && <HumanAiPanel humanAi={humanAi} />}
+            {orgMemory && <OrgMemoryPanel orgMemory={orgMemory} />}
+          </div>
+
+          {coordination && coordination.propagationDiffs.length > 0 && (
+            <PropagationDiffPanel diffs={coordination.propagationDiffs} />
+          )}
 
           <div className="grid gap-8 lg:grid-cols-[1fr_280px]">
             <section className="panel min-h-[400px] p-4">
-              <p className="label-caps mb-4 px-1">Trajectory</p>
+              <p className="label-caps mb-4 px-1">
+                {coordination?.lanes.some((l) => l.steps.length > 0)
+                  ? "Multi-agent lanes"
+                  : "Trajectory"}
+              </p>
               {loading ? (
                 <p className="flex min-h-[360px] items-center justify-center prose-calm">
                   Observing…
                 </p>
+              ) : coordination?.lanes.some((l) => l.steps.length > 0) ? (
+                <MultiLaneGraph
+                  lanes={coordination.lanes}
+                  handoffs={coordination.handoffs}
+                  activeStepId={activeStepId}
+                  onStepSelect={handleStepSelect}
+                />
               ) : graph ? (
                 <TrajectoryGraphView
                   graph={graph}

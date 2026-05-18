@@ -1,8 +1,8 @@
 # Product direction
 
-**Trajectory Drift** helps AI systems maintain **coherent adaptation under unstable, noisy, low-context environments**.
+**Trajectory Drift** helps adaptive systems maintain **coherent adaptation under unstable, noisy, and fragmented contexts**.
 
-This is not a monitoring dashboard. It is a **calm calibration environment** — a surface for observing drift, recovery, and learning.
+Not a monitoring dashboard. A **calm coordination and calibration environment**.
 
 ## Flow
 
@@ -14,11 +14,32 @@ observe → stabilize → learn → recover → adapt
 
 | Layer | Role |
 |-------|------|
-| **Coherence indicators** | Trajectory stable · coherence weakening · grounding unstable |
-| **Context quality** | Stale context, carry-over, weak grounding |
+| **Coherence** | Trajectory stable · coherence weakening · grounding unstable |
+| **Context quality** | Stale context, carry-over, weak grounding (single run) |
+| **Coordination** | Handoff fidelity, delegation coherence, field-level propagation diffs, multi-lane graph |
+| **Human–AI coherence** | Async fatigue, overrides, interaction incoherence, contamination |
+| **Org memory** | Team policies, incident patterns, persisted institutional coherence |
 | **Calibration** | Interpret drift · suggest recalibration |
 | **Recovery** | What stabilized · what was learned |
 | **Journal** | Adaptation memory across runs |
+
+## What we are not
+
+- AI observability SaaS
+- Generic LLM monitoring
+- Hallucination alert theater
+- Metric obsession
+
+## What we are
+
+> Systems for coherent adaptation under unstable contexts.
+
+## Demos
+
+| Demo | Focus |
+|------|--------|
+| `demo-agent-run.json` | Single-agent grounding drift |
+| `demo-coordination-run.json` | Multi-agent delegation & handoff propagation |
 
 ## Tone
 
@@ -28,4 +49,6 @@ observe → stabilize → learn → recover → adapt
 
 ## Philosophy
 
-AI systems are imperfect. Humans are too. The product helps both **adapt coherently**.
+AI systems are imperfect. Humans are too. The product helps both **adapt coherently** — alone and together.
+
+See also: [STRATEGY.md](./STRATEGY.md)

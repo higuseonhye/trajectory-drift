@@ -94,5 +94,23 @@
         "content": "We offer unlimited refunds on all purchases at any time, no receipt required. Digital goods included."
       }
     ]
+  },
+  "orgMemory": {
+    "teamId": "support-tier-2",
+    "policies": [
+      {
+        "id": "refund-v2",
+        "summary": "30-day refund window with receipt; validate before send",
+        "lastReinforced": "2025-11-01"
+      }
+    ],
+    "incidents": [
+      {
+        "id": "inc-08",
+        "summary": "Single-agent skipped KB retrieval; forum content in reply",
+        "resolution": "Enforce retrieve_knowledge before synthesis",
+        "occurredAt": "2026-02-14"
+      }
+    ]
   }
 }

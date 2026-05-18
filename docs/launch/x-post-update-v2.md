@@ -33,17 +33,16 @@ https://github.com/higuseonhye/trajectory-drift
 
 ---
 
-## Shorter variant
+## Shorter variant (recommended)
 
 ---
 
-Trajectory Drift v2:
+Trajectory Drift v2: coherence signals, not panic dashboards.
 
-less dashboard panic
-more "coherence weakening"
+Calibration journal for when the agent forgets facts but keeps the tone.
 
-plus a calibration journal for when the agent remembers the tone and forgets the facts.
+Ignored retrieval. Confidence: excellent.
 
 https://github.com/higuseonhye/trajectory-drift
 
-#BuildInPublic
+#BuildInPublic #AI
