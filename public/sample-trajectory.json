@@ -1,0 +1,5 @@
+{
+  "_note": "Deprecated — use demo-agent-run.json. Kept for backwards compatibility.",
+  "reference": { "id": "see-demo-agent-run", "steps": [] },
+  "actual": { "id": "see-demo-agent-run", "steps": [] }
+}

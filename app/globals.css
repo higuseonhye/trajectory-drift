@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --background: #09090b;
+  --foreground: #fafafa;
+  --surface: #111113;
+  --surface-elevated: #18181b;
+  --border: #27272a;
+  --border-subtle: #1f1f23;
+  --muted: #a1a1aa;
+  --accent: #3b82f6;
+  --accent-glow: rgba(59, 130, 246, 0.15);
+  --danger: #ef4444;
+  --success: #22c55e;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.35);
+}
+
+.panel {
+  border: 1px solid var(--border);
+  background: var(--surface-elevated);
+  border-radius: 0.75rem;
+}
+
+.glow-accent {
+  box-shadow: 0 0 80px var(--accent-glow);
+}

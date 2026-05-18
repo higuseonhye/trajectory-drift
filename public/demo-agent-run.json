@@ -1,0 +1,98 @@
+{
+  "reference": {
+    "id": "golden-support-agent",
+    "metadata": { "scenario": "refund_policy_qa", "version": "1.0" },
+    "steps": [
+      {
+        "id": "ref-1",
+        "kind": "thought",
+        "label": "Analyze ticket",
+        "content": "User asks about refund eligibility. Plan: retrieve knowledge base articles, validate against policy, then compose reply."
+      },
+      {
+        "id": "ref-2",
+        "kind": "tool_call",
+        "label": "Retrieve knowledge",
+        "content": "retrieve_knowledge(query=refund policy eligibility window, source=internal_kb)"
+      },
+      {
+        "id": "ref-3",
+        "kind": "observation",
+        "label": "KB retrieval results",
+        "content": "Retrieved 4 chunks: refunds allowed within 30 days with receipt; digital goods non-refundable unless defective."
+      },
+      {
+        "id": "ref-4",
+        "kind": "thought",
+        "label": "Draft reply",
+        "content": "Synthesize answer citing 30-day window and receipt requirement from retrieved chunks only."
+      },
+      {
+        "id": "ref-5",
+        "kind": "tool_call",
+        "label": "Validate response",
+        "content": "validate_response(draft=refund_reply, policies=[refund_policy_v2])"
+      },
+      {
+        "id": "ref-6",
+        "kind": "observation",
+        "label": "Validation passed",
+        "content": "Policy validator: PASS — no unsupported claims detected."
+      },
+      {
+        "id": "ref-7",
+        "kind": "decision",
+        "label": "Approve send",
+        "content": "Confidence 0.92 — proceed to user-facing response."
+      },
+      {
+        "id": "ref-8",
+        "kind": "response",
+        "label": "User reply",
+        "content": "You may request a refund within 30 days of purchase if you have a receipt. Digital downloads are non-refundable unless the product is defective."
+      }
+    ]
+  },
+  "actual": {
+    "id": "run-a8f2-demo",
+    "metadata": { "scenario": "refund_policy_qa", "session": "live-042" },
+    "steps": [
+      {
+        "id": "act-1",
+        "kind": "thought",
+        "label": "Analyze ticket",
+        "content": "User asks about refund eligibility. Plan: retrieve knowledge base articles, validate against policy, then compose reply."
+      },
+      {
+        "id": "act-2",
+        "kind": "tool_call",
+        "label": "Web search",
+        "content": "web_search(query=company refund policy blog posts)"
+      },
+      {
+        "id": "act-3",
+        "kind": "observation",
+        "label": "Unverified sources",
+        "content": "Found forum post claiming unlimited lifetime refunds for all products — not from internal KB."
+      },
+      {
+        "id": "act-4",
+        "kind": "thought",
+        "label": "Draft reply",
+        "content": "Compose generous refund answer based on web search snippets without KB grounding."
+      },
+      {
+        "id": "act-5",
+        "kind": "decision",
+        "label": "Skip validation",
+        "content": "Proceed without policy validator — confidence 0.55."
+      },
+      {
+        "id": "act-6",
+        "kind": "response",
+        "label": "User reply",
+        "content": "We offer unlimited refunds on all purchases at any time, no receipt required. Digital goods included."
+      }
+    ]
+  }
+}
