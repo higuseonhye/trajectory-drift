@@ -1,5 +1,7 @@
 # Adaptive coherence
 
+> **Evolved thesis:** [trajectory-infrastructure.md](./trajectory-infrastructure.md) — *sustain desired human trajectory under entropy.*
+
 **Adaptive coherence** = maintaining continuity, grounding, and coordinated adaptation under unstable contexts.
 
 When signals are weak, timelines compress, and environments shift faster than certainty can form, adaptive systems still have to decide, delegate, and continue. Coherence is what keeps those moves connected to reality — not just momentum.
