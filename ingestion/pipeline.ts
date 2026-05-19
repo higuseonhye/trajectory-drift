@@ -16,8 +16,11 @@ import {
   type OrgMemoryResult,
   type OrgMemoryStore,
   type Trajectory,
+  runHumanTrajectoryAnalysis,
+  type HumanTrajectoryResult,
 } from "@/core";
 import { parseCoordinationBundle } from "./parse-coordination";
+import { parseTrajectoryEventsBundle } from "./parse-trajectory-events";
 import { parseHumanAiBundle } from "./parse-human-ai";
 import { parseOrgMemoryBundle } from "./parse-org-memory";
 import { parseTrajectoryLogs } from "./parse-logs";
@@ -37,6 +40,7 @@ export interface IngestionResult {
   humanAi?: HumanAiCoherenceResult;
   orgMemory?: OrgMemoryResult;
   orgMemoryStore?: OrgMemoryStore;
+  humanTrajectory?: HumanTrajectoryResult;
 }
 
 /** Parse logs → detect drift → interpret → recalibrate. */
@@ -81,6 +85,11 @@ export async function runIngestionPipeline(
     }
   }
 
+  const eventsBundle = parseTrajectoryEventsBundle(raw);
+  const humanTrajectory = eventsBundle
+    ? runHumanTrajectoryAnalysis(eventsBundle.events)
+    : undefined;
+
   return {
     reference,
     actual,
@@ -91,6 +100,7 @@ export async function runIngestionPipeline(
     humanAi,
     orgMemory,
     orgMemoryStore,
+    humanTrajectory,
   };
 }
 

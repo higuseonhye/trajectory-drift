@@ -20,6 +20,7 @@ import {
 import type {
   CoordinationResult,
   HumanAiCoherenceResult,
+  HumanTrajectoryResult,
   OrgMemoryResult,
 } from "@/core";
 import {
@@ -36,6 +37,8 @@ import { JsonUpload } from "./json-upload";
 import { CoordinationPanel } from "./coordination-panel";
 import { DemoSwitcher } from "./demo-switcher";
 import { HumanAiPanel } from "./human-ai-panel";
+import { HumanTrajectoryPanel } from "./human-trajectory-panel";
+import { InteractionIntelligencePanel } from "./interaction-intelligence-panel";
 import { MultiLaneGraph } from "./multi-lane-graph";
 import { OrgMemoryPanel } from "./org-memory-panel";
 import { PropagationDiffPanel } from "./propagation-diff-panel";
@@ -54,8 +57,10 @@ export function DashboardView() {
   );
   const [humanAi, setHumanAi] = useState<HumanAiCoherenceResult | null>(null);
   const [orgMemory, setOrgMemory] = useState<OrgMemoryResult | null>(null);
+  const [humanTrajectory, setHumanTrajectory] =
+    useState<HumanTrajectoryResult | null>(null);
   const [actual, setActual] = useState<Trajectory | null>(null);
-  const [demoMode, setDemoMode] = useState<DemoMode>("single");
+  const [demoMode, setDemoMode] = useState<DemoMode>("unified");
   const [fileName, setFileName] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -83,6 +88,7 @@ export function DashboardView() {
       setCoordination(data.coordination ?? null);
       setHumanAi(data.humanAi ?? null);
       setOrgMemory(data.orgMemory ?? null);
+      setHumanTrajectory(data.humanTrajectory ?? null);
       saveCalibrationMemory(data.calibration.memory);
       if (data.orgMemoryStore) saveOrgMemory(data.orgMemoryStore);
       setActiveIndex(0);
@@ -109,6 +115,7 @@ export function DashboardView() {
         setCoordination(null);
         setHumanAi(null);
         setOrgMemory(null);
+        setHumanTrajectory(null);
         setActual(null);
         setError(err instanceof Error ? err.message : "Could not read this run");
       } finally {
@@ -172,9 +179,11 @@ export function DashboardView() {
 
   const displayScenario =
     coordination?.scenario ??
-    (demoMode === "coordination"
-      ? "Multi-agent coordination"
-      : "Support agent · grounding under uncertainty");
+    (demoMode === "unified"
+      ? "Unified run · human trajectory + agent coordination"
+      : demoMode === "coordination"
+        ? "Multi-agent coordination"
+        : "Support agent · grounding under uncertainty");
 
   const handleStepSelect = useCallback(
     (stepId: string) => {
@@ -213,6 +222,14 @@ export function DashboardView() {
           >
             Home
           </Link>
+          <a
+            href="http://localhost:3000"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-zinc-600 transition hover:text-zinc-400"
+          >
+            trajectory-native
+          </a>
           <DemoSwitcher
             mode={demoMode}
             onChange={loadDemo}
@@ -238,7 +255,16 @@ export function DashboardView() {
             />
           )}
 
+          {humanTrajectory && (
+            <HumanTrajectoryPanel humanTrajectory={humanTrajectory} />
+          )}
+
           <div className="grid gap-6 lg:grid-cols-2">
+            {humanTrajectory && (
+              <InteractionIntelligencePanel
+                humanTrajectory={humanTrajectory}
+              />
+            )}
             {coordination && (
               <CoordinationPanel coordination={coordination} loading={loading} />
             )}

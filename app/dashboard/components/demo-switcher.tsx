@@ -24,7 +24,11 @@ export function DemoSwitcher({ mode, onChange, disabled }: DemoSwitcherProps) {
               : "text-zinc-600 hover:text-zinc-400"
           } disabled:opacity-50`}
         >
-          {key === "single" ? "Single" : "Multi-agent"}
+          {key === "single"
+            ? "Single"
+            : key === "coordination"
+              ? "Multi-agent"
+              : "Unified"}
         </button>
       ))}
     </div>

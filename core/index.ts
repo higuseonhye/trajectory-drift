@@ -126,3 +126,20 @@ export {
   createEmptyOrgMemory,
   recordOrgPattern,
 } from "./org-memory";
+
+// Human trajectory (native bridge)
+export type {
+  TrajectoryEvent,
+  TrajectoryEventKind,
+  HumanTrajectoryResult,
+  MomentumMetrics,
+  InterventionSignal,
+  InteractionGraph,
+  InteractionNode,
+} from "./human-trajectory";
+export {
+  runHumanTrajectoryAnalysis,
+  computeMomentumMetrics,
+  buildInteractionGraph,
+  detectInterventions,
+} from "./human-trajectory";

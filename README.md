@@ -68,7 +68,7 @@ npm install && npm run dev
 # → http://localhost:3001/dashboard
 ```
 
-Toggle **Single** / **Multi-agent** demos.
+Toggle **Single** / **Multi-agent** / **Unified** (human + system) demos.
 
 ---
 
@@ -96,7 +96,7 @@ core/org-memory/      institutional patterns
 app/                  calm trajectory environment
 ```
 
-**Docs:** [trajectory-infrastructure.md](docs/trajectory-infrastructure.md) · [STRATEGY.md](docs/STRATEGY.md)
+**Docs:** [trajectory-infrastructure.md](docs/trajectory-infrastructure.md) · [bridge.md](docs/bridge.md) · [STRATEGY.md](docs/STRATEGY.md)
 
 ---
 
