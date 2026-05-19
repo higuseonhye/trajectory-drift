@@ -42,6 +42,8 @@ Trajectory Drift explores systems that **sustain trajectory** while adapting —
 
 ## Capabilities
 
+- **Human trajectory** — momentum score, interaction starvation, momentum degrading (native bridge)
+- **Interaction intelligence** — amplifiers vs drains by subject
 - **Coordination** — multi-lane graph, handoffs, field-level propagation diffs
 - **Human–AI coherence** — overrides, async fatigue, authority conflicts
 - **Org memory** — policies, incidents, persisted patterns
