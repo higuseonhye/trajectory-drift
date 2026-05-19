@@ -83,14 +83,14 @@ export function LandingPage() {
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             <Image
               src="/assets/screenshots/multi-lane-graph.png"
-              alt="Multi-agent swimlane graph"
+              alt="Multi-agent swimlane graph (v0.6)"
               width={400}
               height={280}
               className="rounded-md border border-[var(--border-subtle)]"
             />
             <Image
               src="/assets/screenshots/propagation-diff.png"
-              alt="Field propagation diffs"
+              alt="Field-level propagation diffs across handoffs"
               width={400}
               height={280}
               className="rounded-md border border-[var(--border-subtle)]"

@@ -11,7 +11,7 @@ Prevent organizational drift under adaptive systems — agents, teams, and human
 Thesis: [trajectory infrastructure](docs/trajectory-infrastructure.md)
 
 <p align="center">
-  <img src="./assets/screenshots/dashboard-overview.png" alt="Coordination workspace" width="800" />
+  <img src="./assets/screenshots/dashboard-overview.png" alt="Unified workspace — human trajectory + coordination (v0.6)" width="800" />
 </p>
 
 ---
@@ -77,12 +77,12 @@ Toggle **Single** / **Multi-agent** / **Unified** (human + system) demos.
 ## Screenshots
 
 <p align="center">
-  <img src="./assets/screenshots/dashboard-overview.png" alt="Coordination workspace" width="800" />
+  <img src="./assets/screenshots/dashboard-overview.png" alt="Unified workspace — human trajectory + coordination (v0.6)" width="800" />
 </p>
 
 <p align="center">
-  <img src="./assets/screenshots/multi-lane-graph.png" alt="Multi-agent lanes" width="420" />
-  <img src="./assets/screenshots/propagation-diff.png" alt="Field propagation" width="420" />
+  <img src="./assets/screenshots/multi-lane-graph.png" alt="Multi-agent swimlane graph" width="420" />
+  <img src="./assets/screenshots/propagation-diff.png" alt="Field-level propagation diffs across handoffs" width="420" />
 </p>
 
 ---
