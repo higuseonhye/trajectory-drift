@@ -39,11 +39,19 @@ async function main() {
 
   await waitReady(page);
   await clickDemo(page, "Unified");
-  const unifiedMain = page.locator("main").first();
-  await unifiedMain.screenshot({
+  await page.setViewportSize({ width: 1280, height: 675 });
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await page.waitForTimeout(300);
+  await page.screenshot({
     path: path.join(OUT, "dashboard-overview.png"),
+    clip: { x: 0, y: 0, width: 1280, height: 675 },
   });
-  console.log("wrote dashboard-overview.png");
+  console.log("wrote dashboard-overview.png (1280×675 viewport)");
+  await page.screenshot({
+    path: path.join(OUT, "x-post-v08-viewport.png"),
+    clip: { x: 0, y: 0, width: 1280, height: 675 },
+  });
+  console.log("wrote x-post-v08-viewport.png");
 
   await clickDemo(page, "Multi-agent");
   await shotLocator(

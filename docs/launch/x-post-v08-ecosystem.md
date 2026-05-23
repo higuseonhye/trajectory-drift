@@ -8,9 +8,11 @@
 
 | Priority | File | Why |
 |----------|------|-----|
-| **Best (drift solo)** | `assets/screenshots/dashboard-overview.png` | Unified workspace — human + coordination |
-| Pair post | `../trajectory-native/docs/screenshots/demo-hero-social-16x9.png` | Full ecosystem story |
-| Technical | `assets/screenshots/multi-lane-graph.png` | Multi-agent coordination |
+| **Best (drift solo)** | `assets/screenshots/x-post-v08-viewport.png` | Exact 1280×675 viewport — readable in feed |
+| Pair post | `../trajectory-native/docs/screenshots/x-post-v08-viewport.png` | Human-side intro |
+| Product proof | `../trajectory-native/docs/screenshots/x-post-v08-compounding-focus.png` | Compounding wedge |
+
+**Avoid for X:** full-page `dashboard-overview.png` captures (pre-v0.8.1 were entire scroll height).
 
 ---
 
@@ -95,7 +97,7 @@ github.com/higuseonhye/trajectory-native
 
 ## Thread opener
 
-**Tweet 1** (attach `dashboard-overview.png`):
+**Tweet 1** (attach `assets/screenshots/x-post-v08-viewport.png`):
 
 ```
 Observability explains what failed.
