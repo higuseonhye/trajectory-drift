@@ -1,76 +1,92 @@
 # Strategic direction
 
-Trajectory Drift is **not** another AI observability dashboard, generic LLM monitoring tool, AI safety metrics layer, or hallucination alert system.
+Trajectory Drift is **not** another AI observability dashboard, productivity tool, or generic LLM monitoring layer.
 
-Those surfaces are increasingly absorbed into foundation model providers. The durable value is deeper:
-
-> **Maintaining coherent adaptation under unstable, changing, noisy, and fragmented contexts.**
-
-This applies to single agents, multi-agent systems, human–AI collaboration, long-lived memory, and organizational coordination.
+We are building **drift detection and coordination infrastructure** — helping humans and organizations preserve long-term trajectory coherence in the AI era.
 
 ---
 
-## Core thesis
-
-The future bottleneck may not be model intelligence alone — it may be **coordination coherence**.
+## Thesis shift
 
 | Old framing | New framing |
 |-------------|-------------|
-| Drift detection | Coordination coherence |
-| Hallucination monitoring | Adaptive calibration |
-| Observability tooling | Context continuity infrastructure |
-| Alert dashboards | Recovery-aware reasoning environments |
-
-Trajectory Drift evolves from *monitoring AI behavior* toward *maintaining coherence across adaptive systems*.
-
----
-
-## Failure modes we care about
-
-- Role drift · recursive delegation loops · stale assumption propagation
-- Memory fragmentation · conversational inertia
-- Overconfidence under weak grounding · incoherent adaptation between agents
-- Human–AI coordination fatigue
-
-These are **systems coordination problems** — not solved by model quality alone.
+| AI observability | Trajectory / judgment infrastructure |
+| Drift detection (technical) | Human + organizational drift detection |
+| Coordination coherence | Judgment and institutional memory infrastructure |
+| Alert dashboards | Drift Radar + intervention |
+| Monitoring AI behavior | Preserving compounding under entropy |
 
 ---
 
-## Product layers (grounded in observable behavior)
+## Core insight
 
-| Layer | Maps to |
-|-------|---------|
-| **Coherence** | Single-run continuity, stability, forecast |
-| **Context quality** | Stale carry-over, weak grounding in one trajectory |
-| **Coordination** | Handoff fidelity, delegation contracts, propagated fields |
-| **Calibration** | Interpret drift · suggest recalibration |
-| **Recovery & journal** | What stabilized · adaptation memory across runs |
+Modern people and organizations do not mainly suffer from lack of information. They suffer from:
 
-Every conceptual layer must connect to real workflows and measurable patterns — not abstract philosophy software.
+- drift and fragmentation
+- misalignment and short-term optimization
+- decision entropy
+- organizational memory loss
+- labor-only trajectories without leverage
+
+AI should help **detect drift**, **preserve trajectory coherence**, and **compound institutional intelligence** — not merely accelerate output.
 
 ---
 
-## Frontier areas (in exploration)
+## Two drift taxonomies
 
-1. **Coordination drift** — multi-agent divergence, delegation chains, grounding sync *(prototype: `core/coordination/`, multi-agent demo)*
-2. **Human–AI coherence** — interaction incoherence, memory contamination, context collapse
-3. **Context infrastructure** — persistent orchestration, stale memory handling, organizational memory coherence
+| Layer | Taxonomy | Location |
+|-------|----------|----------|
+| **Human trajectory drift** | Prestige, apprentice, labor, noise, moral, spiritual, organizational, AI | [`framework/drift-taxonomy/`](../framework/drift-taxonomy/) |
+| **System/coordination drift** | Delegation, grounding, memory propagation, async override | [`docs/drift-taxonomy.md`](./drift-taxonomy.md) |
+
+Both feed the **Drift Radar** product module.
+
+---
+
+## Product layers
+
+| Layer | Role |
+|-------|------|
+| **Drift detection** | Human + organizational drift signals |
+| **Decision memory** | Institutional memory, rationale preservation |
+| **Coordination** | Human + AI propagation alignment |
+| **Recovery** | Trajectory restoration mechanisms |
+| **Calibration** | Interpret drift, suggest recalibration |
+
+Every layer connects to real workflows and measurable patterns.
+
+---
+
+## Framework
+
+Conceptual architecture lives in [`framework/`](../framework/):
+
+- [`drift-taxonomy/`](../framework/drift-taxonomy/) — what destroys compounding
+- [`signals/`](../framework/signals/) — observable drift indicators
+- [`organizational-drift/`](../framework/organizational-drift/) — team coherence decay
+- [`recovery/`](../framework/recovery/) — restoration mechanisms
+- [`capital-drift/`](../framework/capital-drift/) — ownership and leverage failure
+- [`behavioral-patterns/`](../framework/behavioral-patterns/) — detectable loops
+
+Positive compounding principles: [trajectory-native/framework/](https://github.com/higuseonhye/trajectory-native/tree/main/framework)
+
+Product module mapping: [trajectory-native/framework/product-mapping/](https://github.com/higuseonhye/trajectory-native/tree/main/framework/product-mapping)
 
 ---
 
 ## UX & tone
 
 - Calm, sparse, reflective — high signal, low noise
-- Dry observational humor — restrained, humane, never cynical or performative
-- Emotionally sustainable interaction with imperfect adaptive systems
+- Strategic and grounded — not dopamine-driven or hyperactive
+- Operationally useful — not abstract philosophy or motivational aesthetics
 
 ---
 
 ## Brand line
 
-**Adaptive coherence under unstable contexts.**
+**Infrastructure for long-term human and organizational trajectory.**
 
-Not: *AI observability SaaS.*
+Not: *AI observability SaaS.* Not: *AI for productivity.*
 
 ---
 
@@ -78,7 +94,12 @@ Not: *AI observability SaaS.*
 
 | Repo | Layer |
 |------|--------|
-| [trajectory-native](https://github.com/higuseonhye/trajectory-native) | Human adaptation — founder calibration, weak signals |
-| trajectory-drift | System adaptation — coordination, propagation, org memory |
+| [trajectory-native](https://github.com/higuseonhye/trajectory-native) | What compounds — personal trajectory OS |
+| trajectory-drift | What destroys compounding — drift detection + coordination |
+| org-reasoning-mvp | Decision memory extraction and continuity |
 
-Shared doc: [adaptive-coherence.md](./adaptive-coherence.md)
+---
+
+## Core question
+
+> "What kind of human trajectory does this system help create?"

@@ -57,6 +57,18 @@ async function main() {
     "propagation-diff.png",
   );
 
+  await clickDemo(page, "Single");
+  await shotLocator(
+    page,
+    page.locator("section.panel").filter({ hasText: "Calibration" }),
+    "calibration-panel.png",
+  );
+  await shotLocator(
+    page,
+    page.locator("section.panel").filter({ hasText: "Calibration journal" }),
+    "journal-panel.png",
+  );
+
   await browser.close();
 }
 
