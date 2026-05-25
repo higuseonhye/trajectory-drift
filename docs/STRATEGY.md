@@ -1,96 +1,69 @@
 # Strategic direction
 
-Trajectory Drift is **not** another AI observability dashboard, productivity tool, or habit tracker.
+Trajectory Drift is **not** observability, productivity recovery, or "help teams function better inside broken systems."
 
-We are building **anti-drift infrastructure** — helping humans, teams, and agents notice when trajectory fades **before** failure.
+We are **anti-drift infrastructure** at human, organizational, and civilizational scale.
+
+---
+
+## Critical correction
+
+The goal is NOT simply returning people to "reality" as:
+
+- market feedback
+- social participation
+- conventional productivity
+- adaptation to inertia
+
+Drift can look like **success**. Steering can look like **instability**.
 
 ---
 
 ## Core insight
 
-People rarely collapse all at once. **Most drift quietly.**
+Drift is unconscious inertia — separation from meaningful direction, dead-system adaptation, signal loss — not laziness.
 
-Drift is not laziness. It is losing contact with reality, emotional signal, and direction — while systems still look fine on paper.
-
-Trajectory is the **accumulation of tiny turns** — rudder corrections, not massive reinvention.
+Organizations and agents drift quietly too: execution theater, mission fade, coordination without truth.
 
 ---
 
-## Thesis
+## Core tension
 
-| Old framing | New framing |
-|-------------|-------------|
-| AI observability | Quiet drift detection |
-| Productivity / optimization | Steering + reality-contact |
-| Alert dashboards | "You're fading — here's a turn" |
-| Metric zoo | Trajectory-aware OS (with native) |
-
-Depth layer (still true): coordination coherence, institutional memory, compounding failure patterns.
+| Do not flatten | Hold |
+|----------------|------|
+| Productivity | Direction |
+| Function | Conscious choice |
+| Adaptation | Trajectory integrity |
+| Present optimization | Future civilization |
 
 ---
 
 ## Two layers
 
-| Layer | Role |
-|-------|------|
-| **Emotional (surface)** | Drift club energy — honest, cinematic, human |
-| **Systems (depth)** | Coordination drift, org memory, propagation, recovery |
+| Surface | Depth |
+|---------|-------|
+| "Something feels off" at org scale | Coordination drift, propagation failure |
+| Emotional entry | Systems taxonomy, institutional memory |
 
----
-
-## Quiet drift signals
-
-- decreasing curiosity
-- low reality-contact
-- emotional numbness
-- repetitive dead loops
-- prolonged inertia
-- avoidance patterns
-- fake productivity
-
-Plus structural drift: prestige, labor, apprentice, organizational, AI drift — see [`framework/drift-taxonomy/`](../framework/drift-taxonomy/).
+Shared with [trajectory-native/docs/steering.md](https://github.com/higuseonhye/trajectory-native/blob/main/docs/steering.md)
 
 ---
 
 ## Product layers
 
-| Layer | Role |
-|-------|------|
-| **Drift detection** | Quiet + structural signals |
-| **Steering / recovery** | Tiny turns, reality-contact |
-| **Coordination** | Human + AI propagation |
-| **Institutional memory** | Team doesn't forget why |
+- **Drift detection** — including while metrics look fine
+- **Steering / recovery** — intentional correction, not blind adaptation
+- **Coordination** — human + AI trajectory integrity
+- **Institutional memory** — don't forget why
 
 ---
 
-## UX & tone
+## Deeper mission
 
-- Alive, emotionally resonant — not sterile corporate dashboard
-- Honest about drift without shame theater
-- Calm when needed; cinematic when it helps
-- Systems depth available, not forced upfront
-
----
-
-## Ecosystem
-
-| Repo | Role |
-|------|------|
-| [trajectory-native](https://github.com/higuseonhye/trajectory-native) | Personal steering — tiny turns, reality-contact |
-| trajectory-drift | Drift at scale — teams, agents, organizations |
-
-Shared emotional layer: [trajectory-native/docs/steering.md](https://github.com/higuseonhye/trajectory-native/blob/main/docs/steering.md)
-
----
-
-## Brand line
-
-**Stop drifting quietly.**
-
-Not: *AI observability SaaS.* Not: *Be more productive.*
+Help humans and systems **remain conscious enough to choose direction** — instead of drifting into trajectories nobody truly chose.
 
 ---
 
 ## Core question
 
-> "What's drifting — and what's one tiny turn back toward reality?"
+> "Are we steering — or just functioning?"

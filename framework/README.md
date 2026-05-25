@@ -1,8 +1,10 @@
 # trajectory-drift framework
 
-> **Drift happens quietly. Notice before failure.**
+> **Drift happens quietly — even when metrics look fine.**
 
 Anti-drift infrastructure — emotional surface, systems depth.
+
+Not: return to productivity. Not: blind adaptation.
 
 ---
 
@@ -10,12 +12,20 @@ Anti-drift infrastructure — emotional surface, systems depth.
 
 | Section | Focus |
 |---------|--------|
-| [`drift-taxonomy/`](./drift-taxonomy/) | Quiet drift + structural drift categories |
+| [`drift-taxonomy/`](./drift-taxonomy/) | Quiet drift + structural drift — including functional-but-drifting |
 | [`signals/`](./signals/) | Observable indicators |
-| [`organizational-drift/`](./organizational-drift/) | Teams losing coherence |
-| [`recovery/`](./recovery/) | Tiny turns, reality-contact, restoration |
+| [`organizational-drift/`](./organizational-drift/) | Teams losing direction while executing |
+| [`recovery/`](./recovery/) | Intentional correction — not inertia adaptation |
 | [`capital-drift/`](./capital-drift/) | Ownership failure (depth layer) |
 | [`behavioral-patterns/`](./behavioral-patterns/) | Detectable loops |
+
+---
+
+## Critical distinction
+
+**Drift can look like success.** Execution theater, stable metrics, dead mission.
+
+**Steering can look like instability.** Transformation, frontier exploration, truth-seeking.
 
 ---
 
@@ -23,18 +33,13 @@ Anti-drift infrastructure — emotional surface, systems depth.
 
 | Repo | Question |
 |------|----------|
-| **[trajectory-native](https://github.com/higuseonhye/trajectory-native)** | How do I steer? What tiny turn? |
-| **trajectory-drift** | What's drifting in my team / agents / org? |
+| **[trajectory-native](https://github.com/higuseonhye/trajectory-native)** | Am I steering — or just functioning? |
+| **trajectory-drift** | Is the system drifting while looking operational? |
 
-Emotional layer: [trajectory-native/docs/steering.md](https://github.com/higuseonhye/trajectory-native/blob/main/docs/steering.md)
+Emotional + philosophical layer: [trajectory-native/docs/steering.md](https://github.com/higuseonhye/trajectory-native/blob/main/docs/steering.md)
 
 ---
 
-## Two taxonomies
+## Deeper mission
 
-| Layer | Taxonomy | Location |
-|-------|----------|----------|
-| **Quiet / human drift** | Numbness, avoidance, fake productivity, curiosity loss | [`drift-taxonomy/`](./drift-taxonomy/) |
-| **System/coordination drift** | Delegation, grounding, memory propagation | [`docs/drift-taxonomy.md`](../docs/drift-taxonomy.md) |
-
-Both feed drift detection — surface early, depth when needed.
+Remain conscious enough to **choose direction** — instead of drifting into trajectories nobody truly chose.

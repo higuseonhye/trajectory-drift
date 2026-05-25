@@ -10,19 +10,21 @@ Each entry is meant for **operational diagnosis**, not taxonomy for its own sake
 
 ## Quiet drift (emotional layer)
 
-Everyday drift signals — before prestige or labor drift sets in:
+Everyday drift — including while looking **functional**:
 
 | Drift | Symptoms |
 |-------|----------|
-| **Doomscroll drift** | Numb escape, zero reality-contact |
-| **Numbness drift** | Emotional signal flatlines, nothing surprises you |
-| **Fake productivity** | Busy calendar, no aliveness, no output |
-| **Avoidance drift** | Conversations deferred, loops unclosed |
-| **Curiosity loss** | World feels repetitive, no pull toward anything |
-| **Dead loop drift** | Same week on repeat, no directional change |
-| **Reality disconnect** | Abstraction replaces contact with the world |
+| **Inertia drift** | Moving through life without chosen direction |
+| **Signal loss** | Can't tell what actually matters anymore |
+| **Fake aliveness** | Productive, busy, dead inside |
+| **Dead-system adaptation** | Optimizing inside a life never truly chosen |
+| **Existential suppression** | "Fine" on surface, dishonest underneath |
+| **Numbness / doomscroll** | Escape without signal |
+| **Curiosity death** | Nothing surprises; no frontier pull |
 
-**Recovery:** one honest conversation · one real action · one tiny turn. See [trajectory-native/docs/steering.md](https://github.com/higuseonhye/trajectory-native/blob/main/docs/steering.md).
+**Not drift:** unconventional paths, messy transformation, external instability toward truth.
+
+**Recovery:** not "return to normal" — reconnect with genuine signal, one intentional turn. See [trajectory-native/docs/steering.md](https://github.com/higuseonhye/trajectory-native/blob/main/docs/steering.md).
 
 ---
 

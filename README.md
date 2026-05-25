@@ -20,7 +20,7 @@ Thesis: [STRATEGY.md](docs/STRATEGY.md) · [steering (native)](https://github.co
 
 Observability explains what failed **after** collapse.
 
-Drift happens quietly first — numbness, dead loops, lost curiosity, disconnection. Trajectory infrastructure catches the fade **before** failure.
+Drift happens quietly first — unconscious inertia and signal loss, often while metrics still look fine. Trajectory infrastructure catches the fade **before** you wake up in a life you never chose.
 
 ---
 
@@ -34,7 +34,7 @@ Drift happens quietly first — numbness, dead loops, lost curiosity, disconnect
 
 ## Capabilities
 
-- **Quiet drift** — numbness, avoidance, fake productivity, curiosity loss ([framework/drift-taxonomy/](framework/drift-taxonomy/))
+- **Quiet drift** — inertia, signal loss, fake aliveness, dead-system adaptation ([framework/drift-taxonomy/](framework/drift-taxonomy/))
 - **Human trajectory** — momentum, interaction starvation (native bridge)
 - **Coordination** — multi-lane graph, handoffs, propagation diffs
 - **Human–AI coherence** — overrides, async fatigue, authority conflicts
