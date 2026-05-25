@@ -1,45 +1,54 @@
 # Strategic direction
 
-Trajectory Drift is **not** another AI observability dashboard, productivity tool, or generic LLM monitoring layer.
+Trajectory Drift is **not** another AI observability dashboard, productivity tool, or habit tracker.
 
-We are building **drift detection and coordination infrastructure** — helping humans and organizations preserve long-term trajectory coherence in the AI era.
-
----
-
-## Thesis shift
-
-| Old framing | New framing |
-|-------------|-------------|
-| AI observability | Trajectory / judgment infrastructure |
-| Drift detection (technical) | Human + organizational drift detection |
-| Coordination coherence | Judgment and institutional memory infrastructure |
-| Alert dashboards | Drift Radar + intervention |
-| Monitoring AI behavior | Preserving compounding under entropy |
+We are building **anti-drift infrastructure** — helping humans, teams, and agents notice when trajectory fades **before** failure.
 
 ---
 
 ## Core insight
 
-Modern people and organizations do not mainly suffer from lack of information. They suffer from:
+People rarely collapse all at once. **Most drift quietly.**
 
-- drift and fragmentation
-- misalignment and short-term optimization
-- decision entropy
-- organizational memory loss
-- labor-only trajectories without leverage
+Drift is not laziness. It is losing contact with reality, emotional signal, and direction — while systems still look fine on paper.
 
-AI should help **detect drift**, **preserve trajectory coherence**, and **compound institutional intelligence** — not merely accelerate output.
+Trajectory is the **accumulation of tiny turns** — rudder corrections, not massive reinvention.
 
 ---
 
-## Two drift taxonomies
+## Thesis
 
-| Layer | Taxonomy | Location |
-|-------|----------|----------|
-| **Human trajectory drift** | Prestige, apprentice, labor, noise, moral, spiritual, organizational, AI | [`framework/drift-taxonomy/`](../framework/drift-taxonomy/) |
-| **System/coordination drift** | Delegation, grounding, memory propagation, async override | [`docs/drift-taxonomy.md`](./drift-taxonomy.md) |
+| Old framing | New framing |
+|-------------|-------------|
+| AI observability | Quiet drift detection |
+| Productivity / optimization | Steering + reality-contact |
+| Alert dashboards | "You're fading — here's a turn" |
+| Metric zoo | Trajectory-aware OS (with native) |
 
-Both feed the **Drift Radar** product module.
+Depth layer (still true): coordination coherence, institutional memory, compounding failure patterns.
+
+---
+
+## Two layers
+
+| Layer | Role |
+|-------|------|
+| **Emotional (surface)** | Drift club energy — honest, cinematic, human |
+| **Systems (depth)** | Coordination drift, org memory, propagation, recovery |
+
+---
+
+## Quiet drift signals
+
+- decreasing curiosity
+- low reality-contact
+- emotional numbness
+- repetitive dead loops
+- prolonged inertia
+- avoidance patterns
+- fake productivity
+
+Plus structural drift: prestige, labor, apprentice, organizational, AI drift — see [`framework/drift-taxonomy/`](../framework/drift-taxonomy/).
 
 ---
 
@@ -47,59 +56,41 @@ Both feed the **Drift Radar** product module.
 
 | Layer | Role |
 |-------|------|
-| **Drift detection** | Human + organizational drift signals |
-| **Decision memory** | Institutional memory, rationale preservation |
-| **Coordination** | Human + AI propagation alignment |
-| **Recovery** | Trajectory restoration mechanisms |
-| **Calibration** | Interpret drift, suggest recalibration |
-
-Every layer connects to real workflows and measurable patterns.
-
----
-
-## Framework
-
-Conceptual architecture lives in [`framework/`](../framework/):
-
-- [`drift-taxonomy/`](../framework/drift-taxonomy/) — what destroys compounding
-- [`signals/`](../framework/signals/) — observable drift indicators
-- [`organizational-drift/`](../framework/organizational-drift/) — team coherence decay
-- [`recovery/`](../framework/recovery/) — restoration mechanisms
-- [`capital-drift/`](../framework/capital-drift/) — ownership and leverage failure
-- [`behavioral-patterns/`](../framework/behavioral-patterns/) — detectable loops
-
-Positive compounding principles: [trajectory-native/framework/](https://github.com/higuseonhye/trajectory-native/tree/main/framework)
-
-Product module mapping: [trajectory-native/framework/product-mapping/](https://github.com/higuseonhye/trajectory-native/tree/main/framework/product-mapping)
+| **Drift detection** | Quiet + structural signals |
+| **Steering / recovery** | Tiny turns, reality-contact |
+| **Coordination** | Human + AI propagation |
+| **Institutional memory** | Team doesn't forget why |
 
 ---
 
 ## UX & tone
 
-- Calm, sparse, reflective — high signal, low noise
-- Strategic and grounded — not dopamine-driven or hyperactive
-- Operationally useful — not abstract philosophy or motivational aesthetics
-
----
-
-## Brand line
-
-**Infrastructure for long-term human and organizational trajectory.**
-
-Not: *AI observability SaaS.* Not: *AI for productivity.*
+- Alive, emotionally resonant — not sterile corporate dashboard
+- Honest about drift without shame theater
+- Calm when needed; cinematic when it helps
+- Systems depth available, not forced upfront
 
 ---
 
 ## Ecosystem
 
-| Repo | Layer |
-|------|--------|
-| [trajectory-native](https://github.com/higuseonhye/trajectory-native) | What compounds — personal trajectory OS |
-| trajectory-drift | What destroys compounding — drift detection + coordination |
-| org-reasoning-mvp | Decision memory extraction and continuity |
+| Repo | Role |
+|------|------|
+| [trajectory-native](https://github.com/higuseonhye/trajectory-native) | Personal steering — tiny turns, reality-contact |
+| trajectory-drift | Drift at scale — teams, agents, organizations |
+
+Shared emotional layer: [trajectory-native/docs/steering.md](https://github.com/higuseonhye/trajectory-native/blob/main/docs/steering.md)
+
+---
+
+## Brand line
+
+**Stop drifting quietly.**
+
+Not: *AI observability SaaS.* Not: *Be more productive.*
 
 ---
 
 ## Core question
 
-> "What kind of human trajectory does this system help create?"
+> "What's drifting — and what's one tiny turn back toward reality?"

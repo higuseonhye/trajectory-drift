@@ -2,7 +2,27 @@
 
 Core categories of trajectory destruction — for humans, founders, operators, and organizations.
 
+**Drift happens quietly.** Most people don't collapse — they fade: numbness, dead loops, lost curiosity, disconnection from reality.
+
 Each entry is meant for **operational diagnosis**, not taxonomy for its own sake.
+
+---
+
+## Quiet drift (emotional layer)
+
+Everyday drift signals — before prestige or labor drift sets in:
+
+| Drift | Symptoms |
+|-------|----------|
+| **Doomscroll drift** | Numb escape, zero reality-contact |
+| **Numbness drift** | Emotional signal flatlines, nothing surprises you |
+| **Fake productivity** | Busy calendar, no aliveness, no output |
+| **Avoidance drift** | Conversations deferred, loops unclosed |
+| **Curiosity loss** | World feels repetitive, no pull toward anything |
+| **Dead loop drift** | Same week on repeat, no directional change |
+| **Reality disconnect** | Abstraction replaces contact with the world |
+
+**Recovery:** one honest conversation · one real action · one tiny turn. See [trajectory-native/docs/steering.md](https://github.com/higuseonhye/trajectory-native/blob/main/docs/steering.md).
 
 ---
 

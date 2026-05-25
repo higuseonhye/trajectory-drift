@@ -1,26 +1,26 @@
 # Trajectory Drift
 
-**Drift detection and coordination infrastructure.**  
-Understand what destroys compounding — for humans, teams, agents, and organizations in the AI era.
+**Anti-drift infrastructure.**  
+Most people — and most teams — don't collapse. They **drift quietly**. Notice early. Steer back.
 
-> Not AI observability. Infrastructure for long-term trajectory.
+> Not observability. Not productivity. Navigation.
 
-**trajectory-drift** — what destroys compounding (system-side).  
-**[trajectory-native](https://github.com/higuseonhye/trajectory-native)** — what compounds (human-side).
+**trajectory-drift** — drift at scale (teams, agents, orgs).  
+**[trajectory-native](https://github.com/higuseonhye/trajectory-native)** — personal steering (tiny turns, reality-contact).
 
-Thesis: [STRATEGY.md](docs/STRATEGY.md) · [framework/](framework/)
+Thesis: [STRATEGY.md](docs/STRATEGY.md) · [steering (native)](https://github.com/higuseonhye/trajectory-native/blob/main/docs/steering.md) · [framework/](framework/)
 
 <p align="center">
-  <img src="./assets/screenshots/dashboard-overview.png" alt="Unified drift detection workspace — human + agent coordination (v0.8)" width="800" />
+  <img src="./assets/screenshots/x-post-v08-viewport.png" alt="Anti-drift workspace — quiet drift detection (v0.9)" width="800" />
 </p>
 
 ---
 
 ## Why observability is insufficient
 
-Observability explains what failed. Trajectory infrastructure helps **detect drift before failure** — preserving compounding, coherence, and institutional memory.
+Observability explains what failed **after** collapse.
 
-Modern organizations suffer from drift, fragmentation, decision entropy, and memory loss — not just model errors.
+Drift happens quietly first — numbness, dead loops, lost curiosity, disconnection. Trajectory infrastructure catches the fade **before** failure.
 
 ---
 
@@ -28,13 +28,13 @@ Modern organizations suffer from drift, fragmentation, decision entropy, and mem
 
 | Not this | This |
 |----------|------|
-| AI observability SaaS | Drift detection infrastructure |
-| Productivity / PM copilot | Judgment and institutional memory |
-| Metric zoo | Drift Radar + intervention |
+| AI observability SaaS | Quiet drift detection |
+| Productivity / habit tracker | Anti-drift + steering |
+| Corporate dashboard | Trajectory-aware navigation |
 
 ## Capabilities
 
-- **Drift taxonomy** — prestige, labor, apprentice, noise, organizational, AI drift ([framework/](framework/))
+- **Quiet drift** — numbness, avoidance, fake productivity, curiosity loss ([framework/drift-taxonomy/](framework/drift-taxonomy/))
 - **Human trajectory** — momentum, interaction starvation (native bridge)
 - **Coordination** — multi-lane graph, handoffs, propagation diffs
 - **Human–AI coherence** — overrides, async fatigue, authority conflicts
@@ -68,7 +68,7 @@ Toggle **Single** / **Multi-agent** / **Unified** (human + system) demos.
 ## Screenshots
 
 <p align="center">
-  <img src="./assets/screenshots/dashboard-overview.png" alt="Unified workspace — drift taxonomy + human trajectory bridge" width="800" />
+  <img src="./assets/screenshots/dashboard-overview.png" alt="Unified workspace — human trajectory + coordination drift" width="800" />
 </p>
 
 <p align="center">
@@ -77,8 +77,8 @@ Toggle **Single** / **Multi-agent** / **Unified** (human + system) demos.
 </p>
 
 <p align="center">
-  <img src="./assets/screenshots/calibration-panel.png" alt="Calibration — interpret drift, suggest recalibration" width="420" />
-  <img src="./assets/screenshots/journal-panel.png" alt="Adaptation journal — what stabilized across runs" width="420" />
+  <img src="./assets/screenshots/calibration-panel.png" alt="Calibration — interpret drift, suggest a turn" width="420" />
+  <img src="./assets/screenshots/journal-panel.png" alt="Calibration journal — what stabilized" width="420" />
 </p>
 
 ---

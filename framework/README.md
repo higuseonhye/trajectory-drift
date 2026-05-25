@@ -1,10 +1,8 @@
 # trajectory-drift framework
 
-> **Understand what destroys compounding.**
+> **Drift happens quietly. Notice before failure.**
 
-Conceptual infrastructure for drift detection, entropy patterns, and trajectory failure diagnosis.
-
-This is **not** abstract philosophy or motivational content. It is a drift taxonomy and behavioral diagnosis framework — measurable, operational, and product-mappable.
+Anti-drift infrastructure — emotional surface, systems depth.
 
 ---
 
@@ -12,12 +10,12 @@ This is **not** abstract philosophy or motivational content. It is a drift taxon
 
 | Section | Focus |
 |---------|--------|
-| [`drift-taxonomy/`](./drift-taxonomy/) | Core drift categories — prestige, apprentice, labor, noise, moral, spiritual, organizational, AI |
-| [`signals/`](./signals/) | Observable indicators of drift |
-| [`organizational-drift/`](./organizational-drift/) | How organizations lose coherence |
-| [`recovery/`](./recovery/) | Recovery mechanisms and trajectory restoration |
-| [`capital-drift/`](./capital-drift/) | Failure to understand ownership, leverage, investment |
-| [`behavioral-patterns/`](./behavioral-patterns/) | Behavioral loops — status optimization, pseudo-productivity |
+| [`drift-taxonomy/`](./drift-taxonomy/) | Quiet drift + structural drift categories |
+| [`signals/`](./signals/) | Observable indicators |
+| [`organizational-drift/`](./organizational-drift/) | Teams losing coherence |
+| [`recovery/`](./recovery/) | Tiny turns, reality-contact, restoration |
+| [`capital-drift/`](./capital-drift/) | Ownership failure (depth layer) |
+| [`behavioral-patterns/`](./behavioral-patterns/) | Detectable loops |
 
 ---
 
@@ -25,27 +23,18 @@ This is **not** abstract philosophy or motivational content. It is a drift taxon
 
 | Repo | Question |
 |------|----------|
-| **[trajectory-native](https://github.com/higuseonhye/trajectory-native)** | What compounds? What creates leverage? |
-| **trajectory-drift** (this repo) | What destroys compounding? What causes drift? |
+| **[trajectory-native](https://github.com/higuseonhye/trajectory-native)** | How do I steer? What tiny turn? |
+| **trajectory-drift** | What's drifting in my team / agents / org? |
 
-Together they form a theory of long-term human and organizational trajectory in the AI era.
-
----
-
-## Product thesis
-
-Drift detection infrastructure for:
-- Individuals and founders
-- Operators and teams
-- AI-native organizations
-- Human + agent coordination systems
-
-See [trajectory-native/framework/product-mapping/](https://github.com/higuseonhye/trajectory-native/tree/main/framework/product-mapping) for product module mapping.
+Emotional layer: [trajectory-native/docs/steering.md](https://github.com/higuseonhye/trajectory-native/blob/main/docs/steering.md)
 
 ---
 
 ## Two taxonomies
 
-This framework covers **human trajectory drift** (prestige, labor, apprentice, etc.).
+| Layer | Taxonomy | Location |
+|-------|----------|----------|
+| **Quiet / human drift** | Numbness, avoidance, fake productivity, curiosity loss | [`drift-taxonomy/`](./drift-taxonomy/) |
+| **System/coordination drift** | Delegation, grounding, memory propagation | [`docs/drift-taxonomy.md`](../docs/drift-taxonomy.md) |
 
-The existing [`docs/drift-taxonomy.md`](../docs/drift-taxonomy.md) covers **coordination/system drift** (delegation, grounding, memory propagation). Both are operational — different layers of the same infrastructure.
+Both feed drift detection — surface early, depth when needed.
