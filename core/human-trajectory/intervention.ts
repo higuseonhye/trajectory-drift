@@ -1,3 +1,4 @@
+import { computeEnvironmentDrift } from "./environment";
 import type { MomentumMetrics } from "./momentum-engine";
 import type { TrajectoryEvent } from "./types";
 
@@ -7,7 +8,9 @@ export type InterventionKind =
   | "loop_fragmentation"
   | "reactive_switching"
   | "abstraction_over_action"
-  | "recovery_needed";
+  | "recovery_needed"
+  | "environmental_drift"
+  | "awe_deprivation";
 
 export interface InterventionSignal {
   kind: InterventionKind;
@@ -80,6 +83,48 @@ export function detectInterventions(
       interpretation: "Entropy without recent recovery signals.",
       suggestedAction:
         "Environment reset: walk, offline block, or one non-work activation.",
+    });
+  }
+
+  const envDrift = computeEnvironmentDrift(events);
+  if (envDrift.deadRatio >= 50 && envDrift.deadCount >= 2) {
+    signals.push({
+      kind: "environmental_drift",
+      severity: envDrift.deadRatio >= 70 ? "high" : "medium",
+      interpretation: `${envDrift.deadRatio}% of recent events in dead atmospheres — vitality draining while functional.`,
+      suggestedAction:
+        "Design one anti-drift atmosphere change: natural light, meaningful sync contact, or restorative space before more execution.",
+    });
+  }
+
+  if (envDrift.aweDeprivation) {
+    signals.push({
+      kind: "awe_deprivation",
+      severity: "low",
+      interpretation:
+        "No nature, scale, or restorative atmosphere in recent events — awe contact fading.",
+      suggestedAction:
+        "Introduce one moment of scale or beauty into the team's rhythm this week.",
+    });
+  }
+
+  if (envDrift.scrollDominance) {
+    signals.push({
+      kind: "environmental_drift",
+      severity: "medium",
+      interpretation: "Scroll-feed / digital numbness environment detected.",
+      suggestedAction:
+        "Reduce always-on async loops; one offline or in-person block before more coordination.",
+    });
+  }
+
+  if (envDrift.indoorLoop) {
+    signals.push({
+      kind: "environmental_drift",
+      severity: "low",
+      interpretation: "Prolonged indoor / digital loop — embodied trajectory narrowing.",
+      suggestedAction:
+        "Change the physical or digital environment before adding more tasks.",
     });
   }
 

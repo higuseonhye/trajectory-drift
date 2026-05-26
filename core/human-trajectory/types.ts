@@ -1,4 +1,25 @@
 /** Human trajectory event — shared with trajectory-native bridge format. */
+
+export type EnvironmentContext =
+  | "office"
+  | "home"
+  | "nature"
+  | "transit"
+  | "social"
+  | "digital";
+
+export type EnvironmentAtmosphere =
+  | "alive"
+  | "neutral"
+  | "dead"
+  | "restorative";
+
+export interface EventEnvironment {
+  context?: EnvironmentContext;
+  atmosphere?: EnvironmentAtmosphere;
+  tags?: string[];
+}
+
 export type TrajectoryEventKind =
   | "interaction"
   | "action_taken"
@@ -19,6 +40,7 @@ export interface TrajectoryEvent {
   description: string;
   momentumDelta?: number;
   tags?: string[];
+  environment?: EventEnvironment;
 }
 
 export interface TrajectoryEventsBundle {

@@ -14,6 +14,7 @@ Not: return to productivity. Not: blind adaptation.
 |---------|--------|
 | [`drift-taxonomy/`](./drift-taxonomy/) | Quiet drift + structural drift — including functional-but-drifting and **environmental drift** |
 | [`environment-design/`](./environment-design/) | Dead vs alive environments at org scale |
+| [`physical-layer/`](./physical-layer/) | Future spatial, sensory, ritual at org scale |
 | [`signals/`](./signals/) | Observable indicators |
 | [`organizational-drift/`](./organizational-drift/) | Teams losing direction while executing |
 | [`recovery/`](./recovery/) | Intentional correction — not inertia adaptation |

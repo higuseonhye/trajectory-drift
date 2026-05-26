@@ -302,50 +302,82 @@
     {
       "id": "te1",
       "kind": "interaction",
-      "timestamp": "2026-05-17T14:00:00Z",
+      "timestamp": "2026-05-24T14:00:00Z",
       "subject": "accelerator office hours",
       "description": "30min conversation — activation increased.",
-      "momentumDelta": 1
+      "momentumDelta": 1,
+      "environment": {
+        "context": "social",
+        "atmosphere": "alive",
+        "tags": ["warm", "natural-light"]
+      }
     },
     {
       "id": "te2",
       "kind": "action_avoided",
-      "timestamp": "2026-05-17T11:00:00Z",
+      "timestamp": "2026-05-24T11:00:00Z",
       "subject": "outbound DMs",
       "description": "Planned 5 reach-outs; completed 0.",
       "momentumDelta": -1,
-      "tags": [
-        "loop-open"
-      ]
+      "tags": ["loop-open"],
+      "environment": {
+        "context": "office",
+        "atmosphere": "dead",
+        "tags": ["fluorescent", "indoor-loop"]
+      }
     },
     {
       "id": "te3",
       "kind": "entropy_spike",
-      "timestamp": "2026-05-16T22:00:00Z",
+      "timestamp": "2026-05-23T22:00:00Z",
       "description": "Reactive positioning after low engagement.",
       "momentumDelta": -1,
-      "tags": [
-        "reactive-switch"
-      ]
+      "tags": ["reactive-switch"],
+      "environment": {
+        "context": "digital",
+        "atmosphere": "dead",
+        "tags": ["scroll-feed", "sensory-flat"]
+      }
     },
     {
       "id": "te4",
       "kind": "momentum_gain",
-      "timestamp": "2026-05-16T16:00:00Z",
+      "timestamp": "2026-05-23T16:00:00Z",
       "subject": "pair build session",
       "description": "Shipped UI in 2h.",
-      "momentumDelta": 1
+      "momentumDelta": 1,
+      "environment": {
+        "context": "home",
+        "atmosphere": "neutral",
+        "tags": ["natural-light"]
+      }
     },
     {
       "id": "te5",
       "kind": "loop_unfinished",
-      "timestamp": "2026-05-15T09:00:00Z",
+      "timestamp": "2026-05-22T09:00:00Z",
       "subject": "conference follow-ups",
       "description": "Warm intros uncontacted 72h.",
       "momentumDelta": -1,
-      "tags": [
-        "interaction-starvation"
-      ]
+      "tags": ["interaction-starvation"],
+      "environment": {
+        "context": "office",
+        "atmosphere": "dead",
+        "tags": ["fluorescent", "sterile"]
+      }
+    },
+    {
+      "id": "te6",
+      "kind": "energy_restore",
+      "timestamp": "2026-05-22T07:00:00Z",
+      "subject": "morning walk",
+      "description": "Recovered capacity — no Slack.",
+      "momentumDelta": 1,
+      "environment": {
+        "context": "nature",
+        "atmosphere": "restorative",
+        "tags": ["ocean", "cinematic-scale"]
+      }
     }
   ],
   "trajectoryEventsSource": "trajectory-native-bridge"

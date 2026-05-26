@@ -37,6 +37,7 @@ import { JsonUpload } from "./json-upload";
 import { CoordinationPanel } from "./coordination-panel";
 import { DemoSwitcher } from "./demo-switcher";
 import { HumanAiPanel } from "./human-ai-panel";
+import { EnvironmentalDriftPanel } from "./environmental-drift-panel";
 import { HumanTrajectoryPanel } from "./human-trajectory-panel";
 import { InteractionIntelligencePanel } from "./interaction-intelligence-panel";
 import { MultiLaneGraph } from "./multi-lane-graph";
@@ -257,6 +258,10 @@ export function DashboardView() {
 
           {humanTrajectory && (
             <HumanTrajectoryPanel humanTrajectory={humanTrajectory} />
+          )}
+
+          {humanTrajectory && (
+            <EnvironmentalDriftPanel humanTrajectory={humanTrajectory} />
           )}
 
           <div className="grid gap-6 lg:grid-cols-2">

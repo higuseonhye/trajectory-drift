@@ -1,4 +1,10 @@
-import type { TrajectoryEvent, TrajectoryEventKind } from "@/core/human-trajectory/types";
+import type {
+  TrajectoryEvent,
+  TrajectoryEventKind,
+  EnvironmentContext,
+  EnvironmentAtmosphere,
+  EventEnvironment,
+} from "@/core/human-trajectory/types";
 
 const KINDS = new Set<TrajectoryEventKind>([
   "interaction",
@@ -15,6 +21,41 @@ const KINDS = new Set<TrajectoryEventKind>([
 
 function isRecord(v: unknown): v is Record<string, unknown> {
   return typeof v === "object" && v !== null && !Array.isArray(v);
+}
+
+const ENV_CONTEXTS = new Set<EnvironmentContext>([
+  "office",
+  "home",
+  "nature",
+  "transit",
+  "social",
+  "digital",
+]);
+
+const ENV_ATMOSPHERES = new Set<EnvironmentAtmosphere>([
+  "alive",
+  "neutral",
+  "dead",
+  "restorative",
+]);
+
+function normalizeEnvironment(raw: unknown): EventEnvironment | undefined {
+  if (!isRecord(raw)) return undefined;
+  const context =
+    typeof raw.context === "string" &&
+    ENV_CONTEXTS.has(raw.context as EnvironmentContext)
+      ? (raw.context as EnvironmentContext)
+      : undefined;
+  const atmosphere =
+    typeof raw.atmosphere === "string" &&
+    ENV_ATMOSPHERES.has(raw.atmosphere as EnvironmentAtmosphere)
+      ? (raw.atmosphere as EnvironmentAtmosphere)
+      : undefined;
+  const tags = Array.isArray(raw.tags)
+    ? raw.tags.filter((t): t is string => typeof t === "string")
+    : undefined;
+  if (!context && !atmosphere && !tags?.length) return undefined;
+  return { context, atmosphere, tags };
 }
 
 function normalizeEvent(raw: unknown, index: number): TrajectoryEvent {
@@ -43,6 +84,9 @@ function normalizeEvent(raw: unknown, index: number): TrajectoryEvent {
   }
   if (Array.isArray(raw.tags)) {
     event.tags = raw.tags.filter((t): t is string => typeof t === "string");
+  }
+  if (raw.environment !== undefined) {
+    event.environment = normalizeEnvironment(raw.environment);
   }
   return event;
 }

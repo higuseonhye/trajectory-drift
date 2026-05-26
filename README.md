@@ -35,7 +35,7 @@ Drift happens quietly first — unconscious inertia and signal loss, often while
 ## Capabilities
 
 - **Quiet drift** — inertia, signal loss, fake aliveness, dead-system adaptation, **environmental drift** ([framework/drift-taxonomy/](framework/drift-taxonomy/))
-- **Human trajectory** — momentum, interaction starvation (native bridge)
+- **Human trajectory** — momentum, interaction starvation, **environmental drift** (native bridge)
 - **Coordination** — multi-lane graph, handoffs, propagation diffs
 - **Human–AI coherence** — overrides, async fatigue, authority conflicts
 - **Institutional memory** — policies, incidents, persisted patterns
@@ -69,6 +69,10 @@ Toggle **Single** / **Multi-agent** / **Unified** (human + system) demos.
 
 <p align="center">
   <img src="./assets/screenshots/dashboard-overview.png" alt="Unified workspace — human trajectory + coordination drift" width="800" />
+</p>
+
+<p align="center">
+  <img src="./assets/screenshots/environmental-drift-panel.png" alt="Environmental drift — dead atmospheres from native bridge" width="800" />
 </p>
 
 <p align="center">

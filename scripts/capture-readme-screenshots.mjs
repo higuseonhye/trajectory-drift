@@ -65,6 +65,13 @@ async function main() {
     "propagation-diff.png",
   );
 
+  await clickDemo(page, "Unified");
+  await shotLocator(
+    page,
+    page.locator("section.panel").filter({ hasText: "Environmental drift" }),
+    "environmental-drift-panel.png",
+  );
+
   await clickDemo(page, "Single");
   await shotLocator(
     page,

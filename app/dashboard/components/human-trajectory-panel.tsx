@@ -27,7 +27,23 @@ export function HumanTrajectoryPanel({ humanTrajectory }: Props) {
             Momentum degrading
           </span>
         )}
-        {!metrics.interactionStarvation && !metrics.momentumDegrading && (
+        {humanTrajectory.environmentDrift.deadRatio >= 50 &&
+          humanTrajectory.environmentDrift.deadCount >= 2 && (
+            <span className="rounded border border-rose-900/50 bg-rose-950/30 px-2 py-0.5 text-xs text-rose-400">
+              Environmental drift
+            </span>
+          )}
+        {humanTrajectory.environmentDrift.aweDeprivation && (
+          <span className="rounded border border-zinc-700 px-2 py-0.5 text-xs text-zinc-500">
+            Awe deprivation
+          </span>
+        )}
+        {!metrics.interactionStarvation &&
+          !metrics.momentumDegrading &&
+          !(
+            humanTrajectory.environmentDrift.deadRatio >= 50 &&
+            humanTrajectory.environmentDrift.deadCount >= 2
+          ) && (
           <span className="rounded border border-zinc-700 px-2 py-0.5 text-xs text-zinc-500">
             Trajectory stable
           </span>
