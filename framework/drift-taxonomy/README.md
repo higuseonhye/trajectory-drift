@@ -2,7 +2,7 @@
 
 Core categories of trajectory destruction — for humans, founders, operators, and organizations.
 
-**Drift happens quietly.** Most people don't collapse — they fade: numbness, dead loops, lost curiosity, disconnection from reality.
+**Drift happens quietly.** Most people don't collapse — they fade: numbness, dead loops, lost curiosity, disconnection from reality — often in **dead environments** that suppress vitality.
 
 Each entry is meant for **operational diagnosis**, not taxonomy for its own sake.
 
@@ -21,10 +21,24 @@ Everyday drift — including while looking **functional**:
 | **Existential suppression** | "Fine" on surface, dishonest underneath |
 | **Numbness / doomscroll** | Escape without signal |
 | **Curiosity death** | Nothing surprises; no frontier pull |
+| **Environmental drift** | Sterile spaces, sensory deprivation, awe loss, indoor survival loops |
+| **State collapse** | Functional externally, numb/alive-deprived internally |
 
 **Not drift:** unconventional paths, messy transformation, external instability toward truth.
 
-**Recovery:** not "return to normal" — reconnect with genuine signal, one intentional turn. See [trajectory-native/docs/steering.md](https://github.com/higuseonhye/trajectory-native/blob/main/docs/steering.md).
+**Recovery:** not "return to normal" — reconnect with genuine signal, restore aliveness, one intentional turn (including **environmental turns**). See [trajectory-native/docs/steering.md](https://github.com/higuseonhye/trajectory-native/blob/main/docs/steering.md) · [environment-design](https://github.com/higuseonhye/trajectory-native/blob/main/docs/environment-design.md).
+
+---
+
+## Environmental drift (structural)
+
+**Definition:** Trajectory loss through lifeless surroundings, sensory flattening, and atmospheres that suppress vitality — while remaining functional.
+
+**Symptoms:** Prolonged fluorescent/indoor loops; scroll-feed dominance; no nature or scale contact; emotionally sterile routines; adaptation to dead systems; high output, low aliveness.
+
+**Examples:** Fluorescent office existence · fake networking spaces · endless scrolling environments · extractive productivity culture · disconnected urban survival loops.
+
+**Recovery:** Environmental turns — natural light, nature, movement, aesthetic coherence, meaningful conversation, spaces that restore awe. See [trajectory-native/framework/environment-design/](https://github.com/higuseonhye/trajectory-native/tree/main/framework/environment-design).
 
 ---
 

@@ -1,14 +1,14 @@
 # Trajectory Drift
 
 **Anti-drift infrastructure.**  
-Most people — and most teams — don't collapse. They **drift quietly**. Notice early. Steer back.
+Most people — and most teams — don't collapse. They **drift quietly** — often in dead environments. Notice early. Steer back.
 
-> Not observability. Not productivity. Navigation.
+> Not observability. Not productivity. Navigation through environment, emotion, and direction.
 
 **trajectory-drift** — drift at scale (teams, agents, orgs).  
-**[trajectory-native](https://github.com/higuseonhye/trajectory-native)** — personal steering (tiny turns, reality-contact).
+**[trajectory-native](https://github.com/higuseonhye/trajectory-native)** — personal steering (tiny turns, state, environment).
 
-Thesis: [STRATEGY.md](docs/STRATEGY.md) · [steering (native)](https://github.com/higuseonhye/trajectory-native/blob/main/docs/steering.md) · [framework/](framework/)
+Thesis: [STRATEGY.md](docs/STRATEGY.md) · [environment & state](docs/environment-design.md) · [steering (native)](https://github.com/higuseonhye/trajectory-native/blob/main/docs/steering.md) · [framework/](framework/)
 
 <p align="center">
   <img src="./assets/screenshots/x-post-v08-viewport.png" alt="Anti-drift workspace — quiet drift detection (v0.9)" width="800" />
@@ -20,7 +20,7 @@ Thesis: [STRATEGY.md](docs/STRATEGY.md) · [steering (native)](https://github.co
 
 Observability explains what failed **after** collapse.
 
-Drift happens quietly first — unconscious inertia and signal loss, often while metrics still look fine. Trajectory infrastructure catches the fade **before** you wake up in a life you never chose.
+Drift happens quietly first — unconscious inertia and signal loss, often while metrics still look fine — accelerated by **sterile environments** and sensory deprivation. Trajectory infrastructure catches the fade **before** you wake up in a life you never chose.
 
 ---
 
@@ -34,7 +34,7 @@ Drift happens quietly first — unconscious inertia and signal loss, often while
 
 ## Capabilities
 
-- **Quiet drift** — inertia, signal loss, fake aliveness, dead-system adaptation ([framework/drift-taxonomy/](framework/drift-taxonomy/))
+- **Quiet drift** — inertia, signal loss, fake aliveness, dead-system adaptation, **environmental drift** ([framework/drift-taxonomy/](framework/drift-taxonomy/))
 - **Human trajectory** — momentum, interaction starvation (native bridge)
 - **Coordination** — multi-lane graph, handoffs, propagation diffs
 - **Human–AI coherence** — overrides, async fatigue, authority conflicts

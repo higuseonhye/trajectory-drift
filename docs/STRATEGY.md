@@ -21,9 +21,17 @@ Drift can look like **success**. Steering can look like **instability**.
 
 ## Core insight
 
-Drift is unconscious inertia — separation from meaningful direction, dead-system adaptation, signal loss — not laziness.
+Drift is unconscious inertia — separation from meaningful direction, dead-system adaptation, **dead-environment adaptation**, signal loss — not laziness.
 
-Organizations and agents drift quietly too: execution theater, mission fade, coordination without truth.
+Organizations and agents drift quietly too: execution theater, mission fade, coordination without truth — often in atmospheres that drain vitality.
+
+---
+
+## Environment & state
+
+People are environment-sensitive systems. Trajectory is embodied — at individual and collective scale.
+
+See [environment-design.md](./environment-design.md) · [trajectory-native/docs/environment-design.md](https://github.com/higuseonhye/trajectory-native/blob/main/docs/environment-design.md)
 
 ---
 
@@ -51,10 +59,11 @@ Shared with [trajectory-native/docs/steering.md](https://github.com/higuseonhye/
 
 ## Product layers
 
-- **Drift detection** — including while metrics look fine
-- **Steering / recovery** — intentional correction, not blind adaptation
+- **Drift detection** — including while metrics look fine; **environmental drift**
+- **Steering / recovery** — intentional correction, not blind adaptation; environmental turns
 - **Coordination** — human + AI trajectory integrity
 - **Institutional memory** — don't forget why
+- **State / atmosphere** — anti-dead-environment design (evolving)
 
 ---
 
@@ -64,6 +73,8 @@ Help humans and systems **remain conscious enough to choose direction** — inst
 
 ---
 
-## Core question
+## Core questions
 
 > "Are we steering — or just functioning?"
+
+> "What environments help humans and systems remain alive, awake, emotionally connected, and directionally conscious?"
