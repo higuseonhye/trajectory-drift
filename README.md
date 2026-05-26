@@ -11,7 +11,7 @@ Most people — and most teams — don't collapse. They **drift quietly** — of
 Thesis: [STRATEGY.md](docs/STRATEGY.md) · [environment & state](docs/environment-design.md) · [steering (native)](https://github.com/higuseonhye/trajectory-native/blob/main/docs/steering.md) · [framework/](framework/)
 
 <p align="center">
-  <img src="./assets/screenshots/x-post-v08-viewport.png" alt="Anti-drift workspace — quiet drift detection (v0.9)" width="800" />
+  <img src="./assets/screenshots/x-post-v08-viewport.png" alt="Anti-drift workspace — quiet drift in dead environments (v0.9)" width="800" />
 </p>
 
 ---
@@ -94,7 +94,7 @@ core/org-memory/      institutional patterns
 app/                  calm trajectory environment
 ```
 
-**Docs:** [STRATEGY.md](docs/STRATEGY.md) · [framework/](framework/) · [trajectory-infrastructure.md](docs/trajectory-infrastructure.md) · [bridge.md](docs/bridge.md)
+**Docs:** [STRATEGY.md](docs/STRATEGY.md) · [environment & state](docs/environment-design.md) · [framework/](framework/) · [trajectory-infrastructure.md](docs/trajectory-infrastructure.md) · [bridge.md](docs/bridge.md)
 
 ---
 
