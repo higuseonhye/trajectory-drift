@@ -58,7 +58,7 @@ Using AI to do more labor faster without shifting toward ownership, systems, or 
 
 ## Recovery
 
-See [`../recovery/`](../recovery/) and [trajectory-native/framework/capital-native/](https://github.com/higuseonhye/trajectory-native/tree/main/framework/capital-native).
+See [`../recovery/`](../recovery/) and [trajectory-native/framework/capital-native/](https://github.com/higuseonhye/return/tree/main/framework/capital-native).
 
 ---
 
@@ -66,4 +66,4 @@ See [`../recovery/`](../recovery/) and [trajectory-native/framework/capital-nati
 
 Capital & Leverage Reflection module surfaces capital drift patterns through behavioral signals — not financial advice.
 
-See [capital-leverage-reflection](https://github.com/higuseonhye/trajectory-native/blob/main/framework/product-mapping/capital-leverage-reflection.md).
+See [capital-leverage-reflection](https://github.com/higuseonhye/return/blob/main/framework/product-mapping/capital-leverage-reflection.md).

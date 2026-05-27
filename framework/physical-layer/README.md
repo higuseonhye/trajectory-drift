@@ -2,7 +2,7 @@
 
 Software navigates trajectory; **physical and cultural environments** carry it at team scale.
 
-Canonical personal layer: [trajectory-native/framework/physical-layer/](https://github.com/higuseonhye/trajectory-native/tree/main/framework/physical-layer)
+Canonical personal layer: [trajectory-native/framework/physical-layer/](https://github.com/higuseonhye/return/tree/main/framework/physical-layer)
 
 ---
 

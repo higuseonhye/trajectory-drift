@@ -60,4 +60,4 @@ Drift Radar ingests trajectory events and surfaces these signals as intervention
 
 Implementation: `trajectory-native` intervention layer · native ↔ drift bridge.
 
-See [product-mapping/drift-radar](https://github.com/higuseonhye/trajectory-native/blob/main/framework/product-mapping/drift-radar.md).
+See [product-mapping/drift-radar](https://github.com/higuseonhye/return/blob/main/framework/product-mapping/drift-radar.md).

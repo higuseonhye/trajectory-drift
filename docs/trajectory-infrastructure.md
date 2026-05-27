@@ -49,7 +49,7 @@ Beyond multi-agent handoffs and org memory:
 
 | Repo | Scope |
 |------|--------|
-| **[trajectory-native](https://github.com/higuseonhye/trajectory-native)** | Personal trajectory OS — momentum, intervention, interaction |
+| **[trajectory-native](https://github.com/higuseonhye/return)** | Personal trajectory OS — momentum, intervention, interaction |
 | **trajectory-drift** | Organizational + agent coordination infrastructure |
 
 Prior framing: [adaptive-coherence.md](./adaptive-coherence.md)

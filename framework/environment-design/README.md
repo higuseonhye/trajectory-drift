@@ -2,7 +2,7 @@
 
 Dead environments create drift at team and civilization scale — not only cognitive failure.
 
-Personal-layer canonical docs: [trajectory-native/framework/environment-design/](https://github.com/higuseonhye/trajectory-native/tree/main/framework/environment-design)
+Personal-layer canonical docs: [trajectory-native/framework/environment-design/](https://github.com/higuseonhye/return/tree/main/framework/environment-design)
 
 ---
 

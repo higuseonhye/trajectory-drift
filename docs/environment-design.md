@@ -2,7 +2,7 @@
 
 Organizations and individuals drift in **dead environments** — not only through bad decisions.
 
-Canonical personal-layer doc: [trajectory-native/docs/environment-design.md](https://github.com/higuseonhye/trajectory-native/blob/main/docs/environment-design.md)
+Canonical personal-layer doc: [trajectory-native/docs/environment-design.md](https://github.com/higuseonhye/return/blob/main/docs/environment-design.md)
 
 ---
 
@@ -42,7 +42,7 @@ Not only process fixes — **atmospheric and state restoration**:
 - sensory and aesthetic coherence in how teams work
 - anti-dead-environment design in tooling and culture
 
-See [`../framework/drift-taxonomy/`](../framework/drift-taxonomy/) · [native environment framework](https://github.com/higuseonhye/trajectory-native/tree/main/framework/environment-design)
+See [`../framework/drift-taxonomy/`](../framework/drift-taxonomy/) · [native environment framework](https://github.com/higuseonhye/return/tree/main/framework/environment-design)
 
 ---
 

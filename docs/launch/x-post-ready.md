@@ -30,7 +30,7 @@ They're failures of adaptation under changing context.
 
 Open-source MVP. Live demo loads automatically — zero setup.
 
-https://github.com/higuseonhye/trajectory-drift
+https://github.com/higuseonhye/drift
 
 #BuildInPublic #AI #Agents #LLM
 
@@ -48,7 +48,7 @@ Not monitoring. Behavioral adaptation.
 
 Weak signals matter. Continuity matters.
 
-Demo: github.com/higuseonhye/trajectory-drift
+Demo: github.com/higuseonhye/drift
 
 #BuildInPublic #AI
 

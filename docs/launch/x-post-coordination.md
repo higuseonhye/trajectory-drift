@@ -22,7 +22,7 @@ Grounding remained unresolved.
 
 Open source. Multi-agent demo loads itself.
 
-https://github.com/higuseonhye/trajectory-drift
+https://github.com/higuseonhye/drift
 
 #BuildInPublic #AI #Agents
 ```
@@ -38,7 +38,7 @@ Multi-agent handoffs · field propagation diffs · human–AI fatigue · org mem
 
 Agents agreed. Grounding didn't.
 
-https://github.com/higuseonhye/trajectory-drift
+https://github.com/higuseonhye/drift
 
 #BuildInPublic #AI
 ```

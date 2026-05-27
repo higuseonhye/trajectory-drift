@@ -17,8 +17,8 @@ System coordination on the other.
 
 Archives of real failure patterns, not philosophy.
 
-https://github.com/higuseonhye/trajectory-native
-https://github.com/higuseonhye/trajectory-drift
+https://github.com/higuseonhye/return
+https://github.com/higuseonhye/drift
 
 #BuildInPublic
 ```
@@ -36,8 +36,8 @@ Same unstable contexts. Different failure modes.
 The system preserved continuity.
 Reality degraded quietly.
 
-https://github.com/higuseonhye/trajectory-native
-https://github.com/higuseonhye/trajectory-drift
+https://github.com/higuseonhye/return
+https://github.com/higuseonhye/drift
 
 #BuildInPublic
 ```

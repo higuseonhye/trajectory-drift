@@ -31,7 +31,7 @@ Organizations and agents drift quietly too: execution theater, mission fade, coo
 
 People are environment-sensitive systems. Trajectory is embodied — at individual and collective scale.
 
-See [environment-design.md](./environment-design.md) · [trajectory-native/docs/environment-design.md](https://github.com/higuseonhye/trajectory-native/blob/main/docs/environment-design.md)
+See [environment-design.md](./environment-design.md) · [trajectory-native/docs/environment-design.md](https://github.com/higuseonhye/return/blob/main/docs/environment-design.md)
 
 ---
 
@@ -53,7 +53,7 @@ See [environment-design.md](./environment-design.md) · [trajectory-native/docs/
 | "Something feels off" at org scale | Coordination drift, propagation failure |
 | Emotional entry | Systems taxonomy, institutional memory |
 
-Shared with [trajectory-native/docs/steering.md](https://github.com/higuseonhye/trajectory-native/blob/main/docs/steering.md)
+Shared with [trajectory-native/docs/steering.md](https://github.com/higuseonhye/return/blob/main/docs/steering.md)
 
 ---
 

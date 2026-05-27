@@ -27,7 +27,7 @@ Just a calm place to notice when adaptation drifts — and recalibrate before th
 
 Open source. Demo loads itself.
 
-https://github.com/higuseonhye/trajectory-drift
+https://github.com/higuseonhye/drift
 
 #BuildInPublic #AI #Agents
 
@@ -43,6 +43,6 @@ Calibration journal for when the agent forgets facts but keeps the tone.
 
 Ignored retrieval. Confidence: excellent.
 
-https://github.com/higuseonhye/trajectory-drift
+https://github.com/higuseonhye/drift
 
 #BuildInPublic #AI

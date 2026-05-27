@@ -10,7 +10,7 @@ Human rhythm at collective scale — warmth first, systems underneath.
 
 | Section | Focus |
 |---------|--------|
-| [`human-rhythm/`](../framework/human-rhythm/) | Shared philosophy — [canonical doc](https://github.com/higuseonhye/trajectory-native/blob/main/docs/human-rhythm.md) |
+| [`human-rhythm/`](../framework/human-rhythm/) | Shared philosophy — [canonical doc](https://github.com/higuseonhye/return/blob/main/docs/human-rhythm.md) |
 | [`drift-taxonomy/`](./drift-taxonomy/) | When rhythm fades — quiet + structural patterns |
 | [`environment-design/`](./environment-design/) | Dead vs alive environments at org scale |
 | [`physical-layer/`](./physical-layer/) | Future spatial expression |
@@ -29,7 +29,7 @@ Human rhythm at collective scale — warmth first, systems underneath.
 
 | Name | Question |
 |------|----------|
-| **[Return](https://github.com/higuseonhye/trajectory-native)** | Do I still feel like myself? |
+| **[Return](https://github.com/higuseonhye/return)** | Do I still feel like myself? |
 | **Drift** | Has rhythm left the collective? |
 
 ---

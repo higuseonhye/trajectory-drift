@@ -39,7 +39,7 @@ Recovery is **operational**, not motivational. Each mechanism connects to measur
 
 **Addresses:** Spiritual Drift, fragmented direction.
 
-See [trajectory-native/framework/coherence/](https://github.com/higuseonhye/trajectory-native/tree/main/framework/coherence).
+See [trajectory-native/framework/coherence/](https://github.com/higuseonhye/return/tree/main/framework/coherence).
 
 ---
 

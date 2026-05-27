@@ -1,6 +1,6 @@
 # Drift
 
-*Part of [Drift & Return](https://github.com/higuseonhye/trajectory-native/blob/main/docs/human-rhythm.md)*
+*Part of [Drift & Return](https://github.com/higuseonhye/return/blob/main/docs/human-rhythm.md)*
 
 ---
 
@@ -30,7 +30,7 @@ A **quiet room** for:
 
 Same world as Return: vermouth hour patience, kissaten silence, greenhouse warmth. Interfaces that breathe. Copy that doesn't hustle.
 
-[Shared aesthetic →](https://github.com/higuseonhye/trajectory-native/blob/main/docs/aesthetic-system.md)
+[Shared aesthetic →](https://github.com/higuseonhye/return/blob/main/docs/aesthetic-system.md)
 
 ---
 
@@ -49,11 +49,11 @@ Single · multi-agent · unified demos — human rhythm alongside system rhythm.
 
 | Name | Repository | Role |
 |------|------------|------|
-| **Return** | [trajectory-native](https://github.com/higuseonhye/trajectory-native) | Personal rhythm |
-| **Drift** | this repo | Collective rhythm — teams, agents, orgs |
-| **Continuity** | [org-reasoning-mvp](https://github.com/higuseonhye/org-reasoning-mvp) | Decision memory |
+| **Return** | [return](https://github.com/higuseonhye/return) | Personal rhythm |
+| **Drift** | [drift](https://github.com/higuseonhye/drift) | Collective rhythm — teams, agents, orgs |
+| **Continuity** | [continuity](https://github.com/higuseonhye/continuity) | Decision memory |
 
-Philosophy: [human rhythm (native)](https://github.com/higuseonhye/trajectory-native/blob/main/docs/human-rhythm.md) · [environment & state](docs/environment-design.md) · [framework/](framework/)
+Philosophy: [human rhythm (native)](https://github.com/higuseonhye/return/blob/main/docs/human-rhythm.md) · [environment & state](docs/environment-design.md) · [framework/](framework/)
 
 ---
 
@@ -65,6 +65,6 @@ Coordination graphs, propagation, calibration journal — technical depth under 
 
 ## Status
 
-Evolving in public. **Drift** is the human name; `trajectory-drift` remains the GitHub slug for now.
+Evolving in public. **Drift** · [github.com/higuseonhye/drift](https://github.com/higuseonhye/drift)
 
 MIT

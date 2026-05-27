@@ -10,7 +10,7 @@
 | [launch/x-post-coordination.md](./launch/x-post-coordination.md) | X copy — coordination update |
 | [launch/x-post-ecosystem.md](./launch/x-post-ecosystem.md) | X copy — native + drift ecosystem |
 
-**Sibling repo:** [trajectory-native](https://github.com/higuseonhye/trajectory-native) — [calibration archive](https://github.com/higuseonhye/trajectory-native/blob/main/docs/calibration-archive.md)
+**Sibling repo:** [trajectory-native](https://github.com/higuseonhye/return) — [calibration archive](https://github.com/higuseonhye/return/blob/main/docs/calibration-archive.md)
 
 ## Assets
 

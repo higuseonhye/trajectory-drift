@@ -22,8 +22,8 @@ trajectory-drift
 The agents agreed confidently.
 Grounding remained unresolved.
 
-https://github.com/higuseonhye/trajectory-native
-https://github.com/higuseonhye/trajectory-drift
+https://github.com/higuseonhye/return
+https://github.com/higuseonhye/drift
 
 #BuildInPublic
 ```

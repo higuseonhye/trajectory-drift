@@ -247,7 +247,7 @@ export function DashboardView() {
       )}
 
       <div className="flex flex-1 overflow-hidden">
-        <main className="mx-auto flex w-full max-w-4xl flex-1 flex-col gap-8 overflow-y-auto px-6 py-8">
+        <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col gap-12 overflow-y-auto px-6 py-10 md:py-14">
           {ready && calibration && (
             <ScenarioBanner
               calibration={calibration}

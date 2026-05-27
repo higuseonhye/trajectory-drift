@@ -84,4 +84,4 @@ Prior operational doc: [`docs/organizational-trajectory.md`](../../docs/organiza
 
 - [`../drift-taxonomy/`](../drift-taxonomy/) — Organizational Drift category
 - [`../recovery/`](../recovery/) — recovery mechanisms
-- [Institutional Memory product module](https://github.com/higuseonhye/trajectory-native/blob/main/framework/product-mapping/institutional-memory.md)
+- [Institutional Memory product module](https://github.com/higuseonhye/return/blob/main/framework/product-mapping/institutional-memory.md)

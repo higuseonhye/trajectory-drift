@@ -31,7 +31,7 @@ What destroys compounding:
 
 Human trajectory drift + agent coordination drift — one framework.
 
-https://github.com/higuseonhye/trajectory-drift
+https://github.com/higuseonhye/drift
 
 #BuildInPublic #AI #Agents
 ```
@@ -48,7 +48,7 @@ Not observability. Drift detection infrastructure.
 prestige · labor · apprentice · coordination drift
 human + agent coherence in one framework
 
-github.com/higuseonhye/trajectory-drift
+github.com/higuseonhye/drift
 
 #BuildInPublic
 ```
@@ -62,7 +62,7 @@ Drift detection infrastructure — not AI observability.
 
 What destroys compounding: prestige, labor, coordination drift.
 
-github.com/higuseonhye/trajectory-drift
+github.com/higuseonhye/drift
 ```
 
 ---
@@ -75,8 +75,8 @@ Not AI productivity. Trajectory infrastructure.
 native → what compounds
 drift → what destroys compounding
 
-github.com/higuseonhye/trajectory-native
-github.com/higuseonhye/trajectory-drift
+github.com/higuseonhye/return
+github.com/higuseonhye/drift
 ```
 
 ---
@@ -90,7 +90,7 @@ what compounds · what destroys compounding
 
 native + drift — open source
 
-github.com/higuseonhye/trajectory-native
+github.com/higuseonhye/return
 ```
 
 ---
@@ -114,7 +114,7 @@ trajectory-drift — system-side
 
 coordination drift · human–AI coherence · org memory · recovery
 
-github.com/higuseonhye/trajectory-drift
+github.com/higuseonhye/drift
 ```
 
 **Tweet 3:**
@@ -124,5 +124,5 @@ trajectory-native — human-side
 
 compounding analysis · decision journal · capital reflection · drift radar
 
-github.com/higuseonhye/trajectory-native
+github.com/higuseonhye/return
 ```

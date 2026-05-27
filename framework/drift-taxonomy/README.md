@@ -26,7 +26,7 @@ Everyday drift — including while looking **functional**:
 
 **Not drift:** unconventional paths, messy transformation, external instability toward truth.
 
-**Recovery:** not "return to normal" — reconnect with genuine signal, restore aliveness, one intentional turn (including **environmental turns**). See [trajectory-native/docs/steering.md](https://github.com/higuseonhye/trajectory-native/blob/main/docs/steering.md) · [environment-design](https://github.com/higuseonhye/trajectory-native/blob/main/docs/environment-design.md).
+**Recovery:** not "return to normal" — reconnect with genuine signal, restore aliveness, one intentional turn (including **environmental turns**). See [trajectory-native/docs/steering.md](https://github.com/higuseonhye/return/blob/main/docs/steering.md) · [environment-design](https://github.com/higuseonhye/return/blob/main/docs/environment-design.md).
 
 ---
 
@@ -38,7 +38,7 @@ Everyday drift — including while looking **functional**:
 
 **Examples:** Fluorescent office existence · fake networking spaces · endless scrolling environments · extractive productivity culture · disconnected urban survival loops.
 
-**Recovery:** Environmental turns — natural light, nature, movement, aesthetic coherence, meaningful conversation, spaces that restore awe. See [trajectory-native/framework/environment-design/](https://github.com/higuseonhye/trajectory-native/tree/main/framework/environment-design).
+**Recovery:** Environmental turns — natural light, nature, movement, aesthetic coherence, meaningful conversation, spaces that restore awe. See [trajectory-native/framework/environment-design/](https://github.com/higuseonhye/return/tree/main/framework/environment-design).
 
 ---
 
@@ -100,7 +100,7 @@ Everyday drift — including while looking **functional**:
 
 **Symptoms:** Values-action divergence; burnout; emptiness despite achievement; integrity compromises.
 
-**Recovery:** Coherence restoration; [`../../trajectory-native/framework/coherence/`](https://github.com/higuseonhye/trajectory-native/tree/main/framework/coherence).
+**Recovery:** Coherence restoration; [`../../trajectory-native/framework/coherence/`](https://github.com/higuseonhye/return/tree/main/framework/coherence).
 
 ---
 

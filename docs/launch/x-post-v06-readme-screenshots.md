@@ -39,8 +39,8 @@ READMEs caught up — live screenshots from the running apps (not mockups).
 → drift: unified workspace · multi-agent lanes · propagation diffs
 → capture scripts in both repos: npm run dev → node scripts/capture-readme-screenshots.mjs
 
-https://github.com/higuseonhye/trajectory-native
-https://github.com/higuseonhye/trajectory-drift
+https://github.com/higuseonhye/return
+https://github.com/higuseonhye/drift
 
 #BuildInPublic
 ```
@@ -64,8 +64,8 @@ trajectory-drift: human + agent drift in one workspace.
 
 Bridge JSON between them. Interaction starvation is a metric now.
 
-https://github.com/higuseonhye/trajectory-native
-https://github.com/higuseonhye/trajectory-drift
+https://github.com/higuseonhye/return
+https://github.com/higuseonhye/drift
 
 #BuildInPublic
 ```
@@ -83,8 +83,8 @@ Live screenshots from the actual v0.6 UI — unified drift workspace, native int
 
 Plus Playwright capture scripts in both repos so docs stay in sync.
 
-https://github.com/higuseonhye/trajectory-native
-https://github.com/higuseonhye/trajectory-drift
+https://github.com/higuseonhye/return
+https://github.com/higuseonhye/drift
 
 #BuildInPublic
 ```
@@ -115,8 +115,8 @@ trajectory-drift
 · unified human + system workspace
 · multi-agent lanes + field propagation diffs (gallery finally current)
 
-https://github.com/higuseonhye/trajectory-native
-https://github.com/higuseonhye/trajectory-drift
+https://github.com/higuseonhye/return
+https://github.com/higuseonhye/drift
 
 #BuildInPublic
 ```
@@ -132,7 +132,7 @@ Live captures: unified workspace, multi-agent swimlanes, propagation diffs acros
 
 `scripts/capture-readme-screenshots.mjs` — regenerate after UI changes.
 
-https://github.com/higuseonhye/trajectory-drift
+https://github.com/higuseonhye/drift
 
 #BuildInPublic
 ```

@@ -73,7 +73,7 @@ export function LandingPage() {
         <p className="mt-16 text-xs text-[var(--muted-soft)]">
           Pairs with{" "}
           <a
-            href="https://github.com/higuseonhye/trajectory-native"
+            href="https://github.com/higuseonhye/return"
             className="underline underline-offset-2 hover:text-[var(--muted)]"
           >
             Return
