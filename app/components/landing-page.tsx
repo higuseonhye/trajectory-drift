@@ -3,19 +3,19 @@ import Link from "next/link";
 
 const FEATURES = [
   {
-    title: "Coordination coherence",
+    title: "When rhythm fades",
     description:
-      "Track how agents, handoffs, and delegated context hold together — or quietly diverge.",
+      "Notice coordination losing warmth — handoffs, memory, presence — before collapse.",
   },
   {
-    title: "Context continuity",
+    title: "Human continuity",
     description:
-      "Stale memory, weak grounding, propagation gaps — measured as coherence, not alerts.",
+      "Bridge from Return: personal rhythm meeting collective systems.",
   },
   {
-    title: "Adaptive calibration",
+    title: "Quiet recovery",
     description:
-      "Observe drift, recover continuity, learn from adaptation. A journal for resilient systems.",
+      "Not alerts. Not optimization. Gentle return to coherence.",
   },
 ];
 
@@ -24,84 +24,63 @@ export function LandingPage() {
     <div className="flex min-h-screen flex-col">
       <header className="border-b border-[var(--border-subtle)]">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-5">
-          <Link href="/" className="text-sm font-medium text-zinc-300">
-            Trajectory Drift
+          <Link href="/" className="text-sm font-medium text-[var(--foreground)]">
+            Drift
           </Link>
           <Link
             href="/dashboard"
-            className="text-sm text-zinc-500 transition hover:text-zinc-300"
+            className="text-sm text-[var(--muted)] transition hover:text-[var(--foreground)]"
           >
-            Open workspace →
+            Enter the room →
           </Link>
         </div>
       </header>
 
       <main className="mx-auto w-full max-w-3xl px-6 py-16 sm:py-24">
-        <p className="label-caps">Coherence infrastructure</p>
-        <h1 className="mt-4 text-3xl font-medium leading-snug tracking-tight text-zinc-100 sm:text-4xl">
-          Coherent adaptation under unstable contexts
+        <p className="label-caps">Drift & Return</p>
+        <h1 className="mt-4 text-3xl font-medium leading-snug tracking-tight text-[var(--foreground)] sm:text-4xl">
+          When collectives lose rhythm
         </h1>
-        <p className="mt-6 max-w-xl text-base leading-relaxed text-zinc-500">
-          A calm coordination and calibration environment for adaptive systems —
-          single agents, multi-agent workflows, and everything that propagates between them.
+        <p className="mt-6 max-w-xl text-base leading-relaxed text-[var(--muted)]">
+          Teams and systems can look operational while warmth, meaning, and
+          continuity quietly leave. Drift is a quiet room for noticing — and
+          returning.
         </p>
-        <p className="mt-4 text-sm italic text-zinc-600">
-          The agents agreed confidently. Grounding remained unresolved.
+        <p className="mt-4 text-sm italic text-[var(--muted-soft)]">
+          Not observability. Not productivity. Human rhythm at scale.
         </p>
 
         <div className="mt-10 flex gap-4">
           <Link
             href="/dashboard"
-            className="border-b border-zinc-500 pb-0.5 text-sm text-zinc-300 transition hover:border-zinc-300"
+            className="border-b border-[var(--accent-soft)] pb-0.5 text-sm text-[var(--foreground)] transition hover:border-[var(--accent)]"
           >
-            View live workspace
+            Open the room
           </Link>
         </div>
 
-        <div className="mt-16 overflow-hidden rounded-md border border-[var(--border-subtle)]">
-          <Image
-            src="/assets/screenshots/dashboard-overview.png"
-            alt="Trajectory Drift workspace"
-            width={900}
-            height={506}
-            className="w-full"
-            priority
-          />
-        </div>
-
-        <section id="product" className="mt-20 space-y-10 border-t border-[var(--border-subtle)] pt-16">
+        <ul className="mt-16 space-y-8 border-t border-[var(--border-subtle)] pt-12">
           {FEATURES.map((f) => (
-            <div key={f.title}>
-              <h2 className="text-sm font-medium text-zinc-300">{f.title}</h2>
-              <p className="mt-2 prose-calm max-w-lg">{f.description}</p>
-            </div>
+            <li key={f.title}>
+              <p className="label-caps">{f.title}</p>
+              <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
+                {f.description}
+              </p>
+            </li>
           ))}
-        </section>
+        </ul>
 
-        <section id="screenshots" className="mt-20 border-t border-[var(--border-subtle)] pt-16">
-          <p className="label-caps">Screenshots</p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            <Image
-              src="/assets/screenshots/multi-lane-graph.png"
-              alt="Multi-agent swimlane graph (v0.6)"
-              width={400}
-              height={280}
-              className="rounded-md border border-[var(--border-subtle)]"
-            />
-            <Image
-              src="/assets/screenshots/propagation-diff.png"
-              alt="Field-level propagation diffs across handoffs"
-              width={400}
-              height={280}
-              className="rounded-md border border-[var(--border-subtle)]"
-            />
-          </div>
-        </section>
+        <p className="mt-16 text-xs text-[var(--muted-soft)]">
+          Pairs with{" "}
+          <a
+            href="https://github.com/higuseonhye/trajectory-native"
+            className="underline underline-offset-2 hover:text-[var(--muted)]"
+          >
+            Return
+          </a>{" "}
+          — personal rhythm.
+        </p>
       </main>
-
-      <footer className="mt-auto border-t border-[var(--border-subtle)] px-6 py-8 text-center text-xs text-zinc-600">
-        Observe · stabilize · learn · recover · adapt
-      </footer>
     </div>
   );
 }

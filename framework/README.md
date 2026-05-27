@@ -1,10 +1,8 @@
 # trajectory-drift framework
 
-> **Drift happens quietly — even when metrics look fine.**
+> **When rhythm fades — notice, don't panic.**
 
-Anti-drift infrastructure — emotional surface, systems depth.
-
-Not: return to productivity. Not: blind adaptation.
+Human rhythm at collective scale — warmth first, systems underneath.
 
 ---
 
@@ -12,36 +10,30 @@ Not: return to productivity. Not: blind adaptation.
 
 | Section | Focus |
 |---------|--------|
-| [`drift-taxonomy/`](./drift-taxonomy/) | Quiet drift + structural drift — including functional-but-drifting and **environmental drift** |
+| [`human-rhythm/`](../framework/human-rhythm/) | Shared philosophy — [canonical doc](https://github.com/higuseonhye/trajectory-native/blob/main/docs/human-rhythm.md) |
+| [`drift-taxonomy/`](./drift-taxonomy/) | When rhythm fades — quiet + structural patterns |
 | [`environment-design/`](./environment-design/) | Dead vs alive environments at org scale |
-| [`physical-layer/`](./physical-layer/) | Future spatial, sensory, ritual at org scale |
+| [`physical-layer/`](./physical-layer/) | Future spatial expression |
+| [`recovery/`](./recovery/) | Gentle return — not blind adaptation |
 | [`signals/`](./signals/) | Observable indicators |
-| [`organizational-drift/`](./organizational-drift/) | Teams losing direction while executing |
-| [`recovery/`](./recovery/) | Intentional correction — not inertia adaptation |
-| [`capital-drift/`](./capital-drift/) | Ownership failure (depth layer) |
-| [`behavioral-patterns/`](./behavioral-patterns/) | Detectable loops |
 
 ---
 
-## Critical distinction
+## Human name
 
-**Drift can look like success.** Execution theater, stable metrics, dead mission.
-
-**Steering can look like instability.** Transformation, frontier exploration, truth-seeking.
+**Drift** — collective rhythm. GitHub slug: `trajectory-drift` (for now).
 
 ---
 
-## Relationship to trajectory-native
+## Relationship to Return
 
-| Repo | Question |
+| Name | Question |
 |------|----------|
-| **[trajectory-native](https://github.com/higuseonhye/trajectory-native)** | Am I steering — or just functioning? |
-| **trajectory-drift** | Is the system drifting while looking operational? |
-
-Emotional + philosophical layer: [trajectory-native/docs/steering.md](https://github.com/higuseonhye/trajectory-native/blob/main/docs/steering.md)
+| **[Return](https://github.com/higuseonhye/trajectory-native)** | Do I still feel like myself? |
+| **Drift** | Has rhythm left the collective? |
 
 ---
 
-## Deeper mission
+## Mission
 
-Remain conscious enough to **choose direction** — instead of drifting into trajectories nobody truly chose.
+Design conditions where humans and systems **do not lose themselves**.

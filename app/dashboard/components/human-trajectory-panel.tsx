@@ -11,8 +11,8 @@ export function HumanTrajectoryPanel({ humanTrajectory }: Props) {
 
   return (
     <section className="panel p-6">
-      <p className="label-caps">Human trajectory</p>
-      <p className="mt-1 text-xs text-zinc-600">From trajectory-native bridge</p>
+      <p className="label-caps">Human rhythm</p>
+      <p className="mt-1 text-xs text-[var(--muted)]">From Return bridge</p>
       <p className="mt-3 text-lg font-medium tracking-tight text-zinc-200">
         {summary}
       </p>

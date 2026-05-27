@@ -1,107 +1,70 @@
-# Trajectory Drift
+# Drift
 
-**Anti-drift infrastructure.**  
-Most people — and most teams — don't collapse. They **drift quietly** — often in dead environments. Notice early. Steer back.
+*Part of [Drift & Return](https://github.com/higuseonhye/trajectory-native/blob/main/docs/human-rhythm.md)*
 
-> Not observability. Not productivity. Navigation through environment, emotion, and direction.
+---
 
-**trajectory-drift** — drift at scale (teams, agents, orgs).  
-**[trajectory-native](https://github.com/higuseonhye/trajectory-native)** — personal steering (tiny turns, state, environment).
+Teams don't collapse either. They **fade** — executing, shipping, measuring — while warmth, meaning, and continuity quietly leave the room.
 
-Thesis: [STRATEGY.md](docs/STRATEGY.md) · [environment & state](docs/environment-design.md) · [steering (native)](https://github.com/higuseonhye/trajectory-native/blob/main/docs/steering.md) · [framework/](framework/)
+**Drift** notices when rhythm leaves collective systems: human teams, agent workflows, organizations that look operational but feel dead inside.
+
+Not observability. Not productivity recovery. Not another dashboard shouting alerts.
+
+A **quiet room** for:
+
+- when rhythm fades in coordination
+- human trajectory from the Return bridge
+- environmental drift — sterile atmospheres, numbness, awe lost
+- memory of what the system chose to forget
+- gentle recovery — not panic, not optimization theater
+
+> *Are we still here — or just functioning?*
 
 <p align="center">
-  <img src="./assets/screenshots/x-post-v08-viewport.png" alt="Anti-drift workspace — quiet drift in dead environments (v0.9)" width="800" />
+  <img src="./assets/screenshots/environmental-drift-panel.png" alt="Drift — when rhythm leaves collective systems" width="800" />
 </p>
 
 ---
 
-## Why observability is insufficient
+## The feeling
 
-Observability explains what failed **after** collapse.
+Same world as Return: vermouth hour patience, kissaten silence, greenhouse warmth. Interfaces that breathe. Copy that doesn't hustle.
 
-Drift happens quietly first — unconscious inertia and signal loss, often while metrics still look fine — accelerated by **sterile environments** and sensory deprivation. Trajectory infrastructure catches the fade **before** you wake up in a life you never chose.
-
----
-
-## What this is
-
-| Not this | This |
-|----------|------|
-| AI observability SaaS | Quiet drift detection |
-| Productivity / habit tracker | Anti-drift + steering |
-| Corporate dashboard | Trajectory-aware navigation |
-
-## Capabilities
-
-- **Quiet drift** — inertia, signal loss, fake aliveness, dead-system adaptation, **environmental drift** ([framework/drift-taxonomy/](framework/drift-taxonomy/))
-- **Human trajectory** — momentum, interaction starvation, **environmental drift** (native bridge)
-- **Coordination** — multi-lane graph, handoffs, propagation diffs
-- **Human–AI coherence** — overrides, async fatigue, authority conflicts
-- **Institutional memory** — policies, incidents, persisted patterns
-- **Recovery** — trajectory restoration mechanisms
-
-Expanded: [framework/drift-taxonomy/](framework/drift-taxonomy/) · [organizational drift](framework/organizational-drift/) · [coordination taxonomy](docs/drift-taxonomy.md)
+[Shared aesthetic →](https://github.com/higuseonhye/trajectory-native/blob/main/docs/aesthetic-system.md)
 
 ---
 
-## Intended integration environments
-
-- LangGraph workflows · MCP-connected systems
-- OpenAI agent orchestration · Claude tool pipelines
-- Retrieval-heavy workflows · human-in-the-loop coordination
-- Organizational memory systems
-
----
-
-## Live workspace
+## Open the room
 
 ```bash
 npm install && npm run dev
 # → http://localhost:3001/dashboard
 ```
 
-Toggle **Single** / **Multi-agent** / **Unified** (human + system) demos.
+Single · multi-agent · unified demos — human rhythm alongside system rhythm.
 
 ---
 
-## Screenshots
+## Ecosystem
 
-<p align="center">
-  <img src="./assets/screenshots/dashboard-overview.png" alt="Unified workspace — human trajectory + coordination drift" width="800" />
-</p>
+| Name | Repository | Role |
+|------|------------|------|
+| **Return** | [trajectory-native](https://github.com/higuseonhye/trajectory-native) | Personal rhythm |
+| **Drift** | this repo | Collective rhythm — teams, agents, orgs |
+| **Continuity** | [org-reasoning-mvp](https://github.com/higuseonhye/org-reasoning-mvp) | Decision memory |
 
-<p align="center">
-  <img src="./assets/screenshots/environmental-drift-panel.png" alt="Environmental drift — dead atmospheres from native bridge" width="800" />
-</p>
-
-<p align="center">
-  <img src="./assets/screenshots/multi-lane-graph.png" alt="Multi-agent swimlane graph — coordination drift" width="420" />
-  <img src="./assets/screenshots/propagation-diff.png" alt="Field-level propagation diffs across handoffs" width="420" />
-</p>
-
-<p align="center">
-  <img src="./assets/screenshots/calibration-panel.png" alt="Calibration — interpret drift, suggest a turn" width="420" />
-  <img src="./assets/screenshots/journal-panel.png" alt="Calibration journal — what stabilized" width="420" />
-</p>
+Philosophy: [human rhythm (native)](https://github.com/higuseonhye/trajectory-native/blob/main/docs/human-rhythm.md) · [environment & state](docs/environment-design.md) · [framework/](framework/)
 
 ---
 
-## Architecture
+## For builders
 
-```
-core/drift/           alignment & drift detection
-core/calibration/     interpret · recovery · journal
-core/coordination/    delegation · propagation diffs
-core/human-ai/        collaboration coherence
-core/org-memory/      institutional patterns
-app/                  calm trajectory environment
-```
-
-**Docs:** [STRATEGY.md](docs/STRATEGY.md) · [environment & state](docs/environment-design.md) · [framework/](framework/) · [trajectory-infrastructure.md](docs/trajectory-infrastructure.md) · [bridge.md](docs/bridge.md)
+Coordination graphs, propagation, calibration journal — technical depth under a warm surface. See [STRATEGY.md](docs/STRATEGY.md) and [framework/drift-taxonomy/](framework/drift-taxonomy/) for precision layers.
 
 ---
 
-## License
+## Status
+
+Evolving in public. **Drift** is the human name; `trajectory-drift` remains the GitHub slug for now.
 
 MIT

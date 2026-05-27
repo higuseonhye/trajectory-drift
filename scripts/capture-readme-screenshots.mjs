@@ -68,7 +68,7 @@ async function main() {
   await clickDemo(page, "Unified");
   await shotLocator(
     page,
-    page.locator("section.panel").filter({ hasText: "Environmental drift" }),
+    page.locator("section.panel").filter({ hasText: "When atmosphere fades" }),
     "environmental-drift-panel.png",
   );
 

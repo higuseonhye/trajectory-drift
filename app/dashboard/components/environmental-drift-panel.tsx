@@ -21,9 +21,9 @@ export function EnvironmentalDriftPanel({ humanTrajectory }: Props) {
 
   return (
     <section className="panel p-6">
-      <p className="label-caps">Environmental drift</p>
-      <p className="mt-1 text-xs text-zinc-600">
-        Dead atmospheres, sensory deprivation, awe loss — from native bridge
+      <p className="label-caps">When atmosphere fades</p>
+      <p className="mt-1 text-xs text-[var(--muted)]">
+        From Return bridge — dead rooms, numbness, awe lost
       </p>
 
       <div className="mt-4 flex flex-wrap gap-2">

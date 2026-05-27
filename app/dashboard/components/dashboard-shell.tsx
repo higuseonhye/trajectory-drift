@@ -11,7 +11,7 @@ interface DashboardShellProps {
 
 export function DashboardShell({
   children,
-  subtitle = "Coherent adaptation under uncertainty",
+  subtitle = "Collective rhythm · Drift & Return",
   status,
   actions,
 }: DashboardShellProps) {
@@ -20,12 +20,12 @@ export function DashboardShell({
       <header className="sticky top-0 z-10 border-b border-[var(--border-subtle)] bg-[var(--background)]/95 backdrop-blur-sm">
         <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-6 px-6 py-4">
           <Link href="/" className="group flex items-center gap-3">
-            <span className="flex h-7 w-7 items-center justify-center rounded border border-zinc-700 text-[10px] font-medium text-zinc-400">
-              TD
+            <span className="flex h-7 w-7 items-center justify-center rounded border border-[var(--border)] text-[10px] font-medium text-[var(--muted)]">
+              D
             </span>
             <div>
-              <p className="text-sm font-medium text-zinc-200 group-hover:text-zinc-100">
-                Trajectory Drift
+              <p className="text-sm font-medium text-[var(--foreground)] group-hover:text-[var(--foreground)]">
+                Drift
               </p>
               <p className="text-xs text-zinc-600">{subtitle}</p>
             </div>

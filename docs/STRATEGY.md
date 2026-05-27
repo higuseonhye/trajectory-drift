@@ -1,8 +1,8 @@
 # Strategic direction
 
-Trajectory Drift is **not** observability, productivity recovery, or "help teams function better inside broken systems."
+> **Tone superseded by [human-rhythm.md](./human-rhythm.md).** Drift is collective rhythm — not observability SaaS.
 
-We are **anti-drift infrastructure** at human, organizational, and civilizational scale.
+**Drift** (human name) notices when rhythm leaves teams, agents, and organizations — without productivity theater or defensive optimization.
 
 ---
 
