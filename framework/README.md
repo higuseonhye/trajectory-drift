@@ -1,4 +1,4 @@
-# trajectory-drift framework
+# Drift framework
 
 > **When rhythm fades — notice, don't panic.**
 
@@ -21,7 +21,7 @@ Human rhythm at collective scale — warmth first, systems underneath.
 
 ## Human name
 
-**Drift** — collective rhythm. GitHub slug: `trajectory-drift` (for now).
+**Drift** — collective rhythm. GitHub: [higuseonhye/drift](https://github.com/higuseonhye/drift)
 
 ---
 

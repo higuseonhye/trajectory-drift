@@ -224,12 +224,12 @@ export function DashboardView() {
             Home
           </Link>
           <a
-            href="http://localhost:3000"
+            href="https://github.com/higuseonhye/return"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs text-zinc-600 transition hover:text-zinc-400"
+            className="text-xs text-[var(--muted)] transition hover:text-[var(--foreground)]"
           >
-            trajectory-native
+            Return
           </a>
           <DemoSwitcher
             mode={demoMode}
