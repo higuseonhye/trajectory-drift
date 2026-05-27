@@ -53,7 +53,7 @@ Single · multi-agent · unified demos — human rhythm alongside system rhythm.
 | **Drift** | [drift](https://github.com/higuseonhye/drift) | Collective rhythm — teams, agents, orgs |
 | **Continuity** | [continuity](https://github.com/higuseonhye/continuity) | Decision memory |
 
-Philosophy: [human rhythm (native)](https://github.com/higuseonhye/return/blob/main/docs/human-rhythm.md) · [environment & state](docs/environment-design.md) · [framework/](framework/)
+Philosophy: [human rhythm (Return)](https://github.com/higuseonhye/return/blob/main/docs/human-rhythm.md) · [about](docs/ABOUT.md) · [environment & state](docs/environment-design.md) · [framework/](framework/)
 
 ---
 
